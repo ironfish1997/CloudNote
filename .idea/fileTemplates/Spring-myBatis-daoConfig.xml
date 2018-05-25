@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <util:properties id="dbConfig" location="classpath:"/>
+
+    <!-- 配置dbcp连接池数据源 -->
+    <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="#{dbConfig.driver}"/>
+        <property name="url" value="#{dbConfig.url}"/>
+        <property name="username" value="#{dbConfig.user}"/>
+        <property name="password" value="#{dbConfig.password}"/>
+        <property name="maxActive" value="#{dbConfig.maxActive}"/>
+    </bean>
+
+    <!-- 配置SqlSessionFactory-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="datasource"/>
+        <!-- mapper映射文件地址-->
+        <property name="mapperLocations" value="classpath:mapper/UserMapper.xml"/>
+    </bean>
+
+    <!-- 配置MapperScannerConfigurer -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 配置包含Mapper映射器接口的包 -->
+        <property name="basePackage" value="dao"/>
+    </bean>
+</beans>
