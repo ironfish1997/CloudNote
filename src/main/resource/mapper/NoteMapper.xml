@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="dao.NoteDao">
+
+    <!--<select id="findNotesByNoteBookId" parameterType="string" resultType="map">
+        select
+        cn_note_id as noteId,
+        cn_notebook_id as notebookId,
+        cn_user_id as userId,
+        cn_note_status_id as statusId,
+        cn_note_type_id as typeId,
+        cn_note_title as title,
+        cn_note_body as body,
+        cn_note_create_time as createTime,
+        cn_note_last_modify_time as lastModifyTime
+        from cn_note
+        where cn_notebook_id =#{notebookId}
+        order by cn_note_create_time descr
+    </select>-->
+
+    <select id="findNotesByNoteBookId" parameterType="string" resultType="map">
+        select
+        cn_note_id as id,
+        cn_note_title as title
+        from
+        cn_note
+        where
+        cn_notebook_id=#{notebookId}
+        order by cn_note_last_modify_time desc
+    </select>
+</mapper>
