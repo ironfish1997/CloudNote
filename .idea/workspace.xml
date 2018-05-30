@@ -10,12 +10,16 @@
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/CloudNote2/target/" />
+    <ignored path="$PROJECT_DIR$/CloudNote/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CloudNote$NoteServiceTest_testFindNotesByNoteBookId.ic" NAME="NoteServiceTest.testFindNotesByNoteBookId Coverage Results" MODIFIED="1527391542401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -31,9 +35,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -41,6 +42,7 @@
         <option value="MyBatisMapper" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,28 +58,13 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/edit.html" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/java/controller/LoginControllwe.java" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/java/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/webapp/alert/alert_like.html" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/java/controller/userController.java" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/resource/conf/spring-service.xml" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/resource/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/resource/conf/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/CloudNote2/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/util/UserNameException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/UserNameException.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/conf/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/test/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/conf/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/resource/conf/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/NoteBookDao.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mapper/NoteBookMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/test/UserTest.java" />
         <option value="$PROJECT_DIR$/src/main/test/NoteBookTest.java" />
@@ -88,33 +75,58 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/login.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/NoteDao.java" />
-        <option value="$PROJECT_DIR$/src/main/test/NoteTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/NotebookNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/NoteService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/NoteBook.java" />
         <option value="$PROJECT_DIR$/src/main/test/NotebookTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/Notebook.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/AbstractController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/NoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
         <option value="$PROJECT_DIR$/src/main/java/dao/NotebookDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/NoteBookService.java" />
         <option value="$PROJECT_DIR$/src/main/test/NotebookServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/scripts/note.js" />
         <option value="$PROJECT_DIR$/src/main/java/controller/NoteBookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/JsonResult.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/editTest.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/TestMarkDown.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_note.html" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NoteContentErrorException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NotebookNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Notebook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_error.html" />
+        <option value="$PROJECT_DIR$/CloudNote/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resource/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Note.java" />
+        <option value="$PROJECT_DIR$/src/main/test/NoteTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NoteNoteFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NoteEditException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/NoteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/NoteServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/NoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/common/ue/umeditor.config.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/umeditor.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Test2.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/note.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/notebook.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/login.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/local.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -138,7 +150,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="CloudNote2 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="CloudNote Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="CloudNote Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -176,6 +193,107 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -185,25 +303,29 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="add_note&#9;null&#9;null&#10;edui-container&#9;null&#9;null&#10;um&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resource/mapper" />
-      <recent name="$PROJECT_DIR$/CloudNote2/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/CloudNote2/src/main/java/service" />
-      <recent name="$PROJECT_DIR$/CloudNote2/src/main/resource" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="service" />
+      <recent name="util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CloudNote2/src/main/resource/conf" />
@@ -212,9 +334,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="util" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="service" />
-      <recent name="util" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/scripts" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/styles" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/app" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/app/editormd" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -233,12 +358,29 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="NoteTest.testFindNotesByNoteBookId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoteServiceTest.testFindNoteByNoteId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CloudNote" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NoteTest" />
+      <option name="MAIN_CLASS_NAME" value="NoteServiceTest" />
+      <option name="METHOD_NAME" value="testFindNoteByNoteId" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="NoteServiceTest.testFindNotesByNoteBookId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CloudNote" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NoteServiceTest" />
       <option name="METHOD_NAME" value="testFindNotesByNoteBookId" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -250,13 +392,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="NotebookServiceTest.testListNoteBookById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoteServiceTest.testUpdateNote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CloudNote" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NotebookServiceTest" />
-      <option name="METHOD_NAME" value="testListNoteBookById" />
+      <option name="MAIN_CLASS_NAME" value="NoteServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateNote" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -267,47 +409,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="NotebookTest.testFindNotebookByNotebookId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoteTest.testFindNoteByNoteId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CloudNote" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NotebookTest" />
-      <option name="METHOD_NAME" value="testFindNotebookByNotebookId" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="NotebookTest.testFindNotesById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CloudNote" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NotebookTest" />
-      <option name="METHOD_NAME" value="testFindNotesById" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="UserTest.testFindNotesById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CloudNote" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserTest" />
-      <option name="METHOD_NAME" value="testFindNotesById" />
+      <option name="MAIN_CLASS_NAME" value="NoteTest" />
+      <option name="METHOD_NAME" value="testFindNoteByNoteId" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -351,6 +459,7 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="Test2.do" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Test2.do" />
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="CloudNote2" />
       <option name="VM_PARAMETERS" />
@@ -414,7 +523,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="CloudNote" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.48" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+    <configuration name="CloudNote" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.48" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -490,19 +599,19 @@
     <list>
       <item itemvalue="JUnit.UserTest.testFindUserByName" />
       <item itemvalue="Tomcat Server.CloudNote" />
-      <item itemvalue="JUnit.UserTest.testFindNotesById" />
-      <item itemvalue="JUnit.NotebookTest.testFindNotesById" />
-      <item itemvalue="JUnit.NotebookServiceTest.testListNoteBookById" />
-      <item itemvalue="JUnit.NoteTest.testFindNotesByNoteBookId" />
-      <item itemvalue="JUnit.NotebookTest.testFindNotebookByNotebookId" />
+      <item itemvalue="JUnit.NoteTest.testFindNoteByNoteId" />
+      <item itemvalue="JUnit.NoteServiceTest.testUpdateNote" />
+      <item itemvalue="JUnit.NoteServiceTest.testFindNoteByNoteId" />
+      <item itemvalue="JUnit.NoteServiceTest.testFindNotesByNoteBookId" />
+      <item itemvalue="JavaScript Debug.Test2.do" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NotebookTest.testFindNotebookByNotebookId" />
-        <item itemvalue="JUnit.NoteTest.testFindNotesByNoteBookId" />
-        <item itemvalue="JUnit.NotebookServiceTest.testListNoteBookById" />
-        <item itemvalue="JUnit.NotebookTest.testFindNotesById" />
-        <item itemvalue="JUnit.UserTest.testFindNotesById" />
+        <item itemvalue="JavaScript Debug.Test2.do" />
+        <item itemvalue="JUnit.NoteServiceTest.testFindNotesByNoteBookId" />
+        <item itemvalue="JUnit.NoteServiceTest.testFindNoteByNoteId" />
+        <item itemvalue="JUnit.NoteServiceTest.testUpdateNote" />
+        <item itemvalue="JUnit.NoteTest.testFindNoteByNoteId" />
       </list>
     </recent_temporary>
   </component>
@@ -523,80 +632,81 @@
       <workItem from="1527065986397" duration="38765000" />
       <workItem from="1527215296144" duration="3095000" />
       <workItem from="1527224489485" duration="711000" />
-      <workItem from="1527229368239" duration="948000" />
+      <workItem from="1527229368239" duration="56939000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 14m 14s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testUpdateNote - 2018.05.26 at 21h 46m 13s.xml">
+      <configuration name="NoteServiceTest.testUpdateNote" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 16m 41s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testUpdateNote - 2018.05.26 at 21h 48m 13s.xml">
+      <configuration name="NoteServiceTest.testUpdateNote" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 17m 09s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testUpdateNote - 2018.05.26 at 21h 49m 11s.xml">
+      <configuration name="NoteServiceTest.testUpdateNote" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 17m 34s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testUpdateNote - 2018.05.27 at 11h 12m 25s.xml">
+      <configuration name="NoteServiceTest.testUpdateNote" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 22m 22s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testUpdateNote - 2018.05.27 at 11h 13m 35s.xml">
+      <configuration name="NoteServiceTest.testUpdateNote" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 22m 48s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testFindNoteByNoteId - 2018.05.27 at 11h 15m 22s.xml">
+      <configuration name="NoteServiceTest.testFindNoteByNoteId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 23m 33s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testFindNoteByNoteId - 2018.05.27 at 11h 17m 02s.xml">
+      <configuration name="NoteServiceTest.testFindNoteByNoteId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 24m 17s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testFindNotesByNoteBookId - 2018.05.27 at 11h 17m 09s.xml">
+      <configuration name="NoteServiceTest.testFindNotesByNoteBookId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 25m 24s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testFindNotesByNoteBookId - 2018.05.27 at 11h 25m 40s.xml">
+      <configuration name="NoteServiceTest.testFindNotesByNoteBookId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NotebookTest_testFindNotebookByNotebookId - 2018.05.24 at 16h 29m 10s.xml">
-      <configuration name="NotebookTest.testFindNotebookByNotebookId" configurationId="JUnit" />
+    <history-entry file="NoteServiceTest_testFindNotesByNoteBookId - 2018.05.27 at 11h 25m 51s.xml">
+      <configuration name="NoteServiceTest.testFindNotesByNoteBookId" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69778000" />
+    <option name="totallyTimeSpent" value="125769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5008143" side_tool="true" visible="true" weight="0.3721591" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980457" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32980457" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.27272728" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32954547" />
+      <window_info id="Web" order="7" sideWeight="0.2911932" side_tool="true" visible="true" weight="0.254886" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49918568" visible="true" weight="0.3721591" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.32954547" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6380091" visible="true" weight="0.28908795" />
-      <window_info id="Web" order="7" sideWeight="0.36199096" side_tool="true" visible="true" weight="0.28908795" />
       <window_info id="Learn" order="6" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49918568" weight="0.3721591" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980457" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5008143" side_tool="true" weight="0.3721591" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.27272728" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7088068" visible="true" weight="0.254886" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32954547" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980457" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32980457" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,355 +748,29 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CloudNote2/src/main/resource/conf/spring-mybatis.xml" />
-    <entry file="file://$PROJECT_DIR$/CloudNote2/src/main/resource/conf/db.properties" />
-    <entry file="file://$PROJECT_DIR$/CloudNote2/src/main/resource/conf/spring-service.xml" />
-    <entry file="file://$PROJECT_DIR$/CloudNote2/src/main/resource/mapper/UserMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/CloudNote2/src/main/webapp/WEB-INF/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/UserNameException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/PasswordException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserNameException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/conf/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="165" column="12" lean-forward="true" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="117" column="64" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/binding/MapperProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/SqlSessionTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/NoteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/NoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Notebook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/NotebookTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/notebook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/conf/spring-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/conf/spring-controller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/NotebookServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/NotebookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3103">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="103" column="58" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/note.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="104" column="29" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/NotebookNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/NoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/NoteBookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/NoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/NoteBookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="5950">
+          <caret line="350" column="9" selection-start-line="350" selection-start-column="9" selection-end-line="350" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

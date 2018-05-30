@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>我的笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-pjax-version" content="v173">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/favico-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/favico-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/favico-72-precomposed.png">
@@ -15,11 +14,9 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <!-- Google-Code代码高亮CSS -->
     <link rel="stylesheet" href="styles/prettify.css"/>
-    <!-- Ueditor编辑器CSS -->
-    <link href="styles/umeditor.min.css" type="text/css" rel="stylesheet">
 </head>
 <body class="animated fadeIn">
-<header class="header">
+<header class="header" style="background: url(images/in_top_bj.jpg);">
     <div class="header-brand">
         <a data-pjax=".content-body" href="edit.html">
             <img class="brand-logo" src="images/dummy/8986f28e.stilearn-logo.png" alt="Stilearn Admin Sample Logo">
@@ -111,30 +108,8 @@
             <div class="module" data-toggle="niceScroll">
                 <div class="chat-contact">
                     <div class="contact-body">
-                        <ul class="contacts-list">
-                            <li class="online">
-                                <a class='checked'>
-                                    <i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i> 使用Java操作符
-                                    <button type="button" class="btn btn-default btn-xs btn_position btn_slide_down"><i
-                                            class="fa fa-chevron-down"></i></button>
-                                </a>
-                                <div class="note_menu" tabindex='-1'>
-                                    <dl>
-                                        <dt>
-                                            <button type="button" class="btn btn-default btn-xs btn_move"
-                                                    title='移动至...'><i class="fa fa-random"></i></button>
-                                        </dt>
-                                        <dt>
-                                            <button type="button" class="btn btn-default btn-xs btn_share" title='分享'><i
-                                                    class="fa fa-sitemap"></i></button>
-                                        </dt>
-                                        <dt>
-                                            <button type="button" class="btn btn-default btn-xs btn_delete" title='删除'>
-                                                <i class="fa fa-times"></i></button>
-                                        </dt>
-                                    </dl>
-                                </div>
-                            </li>
+                        <ul class="contacts-list" id="note-show-ul">
+                            <!-- 这里从数据库映射，动态填充笔记li -->
                         </ul>
                     </div>
                 </div>
@@ -234,7 +209,7 @@
     </div>
 
     <!-- 编辑笔记 -->
-    <div class="col-sm-7" id='pc_part_3'>
+    <div class="col-sm-7" id='edit_note_panel' style="display: none;padding-left: 0;">
         <!-- side-right -->
         <div class="pc_top_third">
             <div class="row">
@@ -251,18 +226,16 @@
                 <div class="chat-contact">
                     <div class="contact-body clear_margin">
                         <!--- 笔记标题 --->
-                        <div class="row">
+                        <div class="row" >
                             <div class="col-xs-8">
                                 <input type="text" class="form-control" id="input_note_title" placeholder='笔记标题...'>
                             </div>
                         </div>
-                        <!--- 笔记标题 --->
+                        <!--- 笔记内容 --->
                         <div class="row">
                             <div class="col-sm-12">
                                 <!--- 输入框 --->
-                                <input type="text/plain" id="myEditor" style="width:100%;height:400px;">
-                                </input>
-                                <!--- 输入框 --->
+                                <div id="myEditor" ></div>
                             </div>
                         </div>
                     </div>
@@ -272,32 +245,41 @@
     </div>
 
     <!-- 预览笔记 -->
-    <div class="col-sm-7" id='pc_part_5' style='display:none;'>
+    <div class="col-sm-7" id='preview_note_panel' style='display:inline;padding-left: 0;'>
         <div class="pc_top_third">
             <div class="row">
                 <div class="col-xs-9">
-                    <h3>预览笔记</h3>
+                    <h3 id="note_title_content">笔记内容</h3>
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-block btn-sm btn-primary" id='edit_note' style="display:none">编辑笔记</button>
                 </div>
             </div>
         </div>
-        <aside class="side-right" id='fifth_side_right'>
-            <div class="module" data-toggle="niceScroll">
-                <div class="chat-contact">
+        <div class="side-right" id="fifth_side_right" style="padding-bottom: 0px;margin-bottom: 0px;">
+            <div class="module" data-toggle="niceScroll" style="background:#ecf0f1;">
+                <!-- 预览页面的标题栏 -->
+                <div class="chat-contact" style="">
                     <div class="contact-body clear_margin">
-                        <h4 id="noput_note_title"></h4>
                     </div>
                 </div>
+                <!-- 预览页面的内容栏 -->
+                <div class=" jumbotron" id="noput_note_body" style="height:100%; margin-bottom:0;">
+
+                </div>
             </div>
-        </aside>
+        </div>
     </div>
 </div>
 
-<footer>
+<footer style="border-bottom: 0px;">
     <p>&copy; 2018 Liuliyong</p>
     <div style='position:absolute;top:5PX;height:30px;right:20px;line-height:26px;border:1px solid #0E7D76;display:none;background:#fff'>
         <strong style='color:#0E7D76;margin:0 10px;'></strong>
     </div>
 </footer>
+</body>
+</html>
 <script type="text/javascript">
     //加载DOM之后处理页面高度
     function get_dom(e) {
@@ -328,15 +310,14 @@
     window.onresize = function () {
         set_height();
         var width = $('#third_side_right').width() - 35;
-        $('.edui-container,.edui-editor-body').width(width);
         $('#myEditor').width(width - 20);
     };
 </script>
 <script type="text/javascript" src="scripts/common/jquery.min.js"></script>
 <!-- 全局变量&&AJAX&&回调函数&&COOKIE -->
+<script type="text/javascript" src="scripts/login.js"></script>
 <script type="text/javascript" src="scripts/notebook.js"></script>
 <script type="text/javascript" src="scripts/note.js"></script>
-<script type="text/javascript" src="scripts/login.js"></script>
 <script type="text/javascript" src="scripts/cookie.js"></script>
 <!-- Bootstrap框架JS -->
 <script src="scripts/common/bootstrap.min.js"></script>
@@ -344,26 +325,27 @@
 <script src="scripts/common/theme-setup.js"></script>
 <!-- 页面事件处理JS -->
 <script class="re-execute" src="scripts/local.js"></script>
-<!-- Ueditor编辑器JS -->
-<script type="text/javascript" charset="utf-8" src="scripts/common/ue/umeditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="scripts/common/ue/umeditor.min.js"></script>
-<script type="text/javascript" src="scripts/common/ue/lang/zh-cn.js"></script>
 <script type="text/javascript">
     //重写JS原生alert函数
     window.alert = function (e) {
-        $('#can').load('./alert/alert_error.html', function () {
+        $('#can').load('alert/alert_error.html', function () {
             $('#error_info').text(' ' + e);
             $('.opacity_bg').show();
         });
     }
-
-    //获取笔记本列表
-    get_nb_list();
-    //获取特殊笔记本列表
-    get_spnb_list();
-    //实例化Ueditor编辑器
-    var um = UM.getEditor('myEditor');
 </script>
-
-</body>
-</html>
+<script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+<script>
+    $(document.body).css({
+        "overflow-x":"hidden",
+        "overflow-y":"hidden"
+    });
+    //实例化
+    window.onload=function () {
+        var E = window.wangEditor;
+        var editor = new E('#myEditor');
+        editor.customConfig.initialFrameWidth='100%';
+        editor.create();
+        $('#myEditor').data('editor',editor);
+    }
+</script>

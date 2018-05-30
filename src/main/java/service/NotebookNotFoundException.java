@@ -1,6 +1,10 @@
 package service;
 
+/**
+ * 笔记本找不到时报这个异常
+ */
 public class NotebookNotFoundException extends RuntimeException {
+
     public NotebookNotFoundException() {
     }
 

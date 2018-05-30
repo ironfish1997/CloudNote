@@ -7,9 +7,6 @@
     <groupId>com.liuliyong</groupId>
     <artifactId>CloudNote</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>CloudNote2</module>
-    </modules>
     <packaging>pom</packaging>
 
     <name>CloudNote Maven Webapp</name>
@@ -89,6 +86,13 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>1.10</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
 
     </dependencies>

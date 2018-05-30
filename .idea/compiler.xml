@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="CloudNote2" target="1.7" />
+      <module name="CloudNote (1)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

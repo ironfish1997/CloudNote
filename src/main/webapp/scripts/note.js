@@ -7,6 +7,17 @@ $(function () {
     //click()方法绑定事件，无法区别事件源
     //绑定笔记本列表区域的点击事件
     $('#notebook-list').on('click', '.notebook', loadNotes);
+    //当note被点击时，让该note高亮显示，并显示note内容
+    $('#note-list').on('click', '.online', chooseNote);
+    //当添加笔记按钮被点击时，打开添加笔记窗口
+    $('#note-list').on('click', '#add_note', showAddNoteDialog);
+    //当预览页面的编辑笔记按钮被按下时，转换到编辑笔记页面;
+    $('#edit_note').on('click', openEditPanel);
+    //当编辑页面的保存按钮被点击时，保存更改
+    $('#save_note').on('click', updateNote);
+    //冒泡监听
+    $('#can').on('click', '.create-note', addNote);
+    $('#can').on('click', '.cancel,.close', closeDialog);
 });
 
 //-------------------------显示所有笔记本的函数--------------------------------------
@@ -56,7 +67,7 @@ function showNotebooks(notebooks) {
     }
 }
 
-//-----------------------显示每个笔记本的笔记的函数-----------------------------------
+//-----------------------有关笔记的函数-----------------------------------
 
 /**
  * 加载当前被点击的笔记本li下的所有笔记
@@ -64,9 +75,29 @@ function showNotebooks(notebooks) {
 
 function loadNotes() {
     var li = $(this);//当前被点击的对象li
+    //给被点击的li增加选定效果
+    li.parent().find('a').removeClass('checked');
+    li.find('a').addClass('checked');
     var url = 'note/list.do';
     var data = {notebookId: li.data('notebookId')};
-    console.log(data);
+    $.getJSON(url, data, function (result) {
+        if (result.state == SUCCESS) {
+            var notes = result.data;
+            showNotes(notes);
+        } else {
+            alert(result.message);
+        }
+    });
+}
+
+/**
+ * 利用notebookId来加载笔记本下所有笔记
+ * @param notebookId
+ */
+function loadNotesByNotebookId(notebookId){
+    //找到当前被选中的笔记本li
+    var url = 'note/list.do';
+    var data = {notebookId: notebookId};
     $.getJSON(url, data, function (result) {
         if (result.state == SUCCESS) {
             var notes = result.data;
@@ -79,7 +110,7 @@ function loadNotes() {
 
 var noteTemplate =
     '<li class="online">' +
-    '<a class="checked">' +
+    '<a class="unchecked">' +
     '<i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>' +
     '[notetitle]' + /* note标题*/
     '<button type="button" class="btn btn-default btn-xs btn_position btn_slide_down"><i class="fa fa-chevron-down"></i></button> ' +
@@ -111,48 +142,137 @@ function showNotes(notes) {
     }
 }
 
-
-/***
- * 查询普通笔记内容
+/**
+ * 高亮显示当前选中的笔记li，并在编辑区和预览区显示笔记内容(待写)
  */
-function getNoteDetail() {
-    console.log("查询普通笔记内容");
+function chooseNote() {
+    //得到当前被选中的li
+    var li = $(this);
+    li.parent().find('a').removeClass('checked');
+    li.find('a').addClass('checked');
+    $('#edit_note').css('display','inline');
+    var noteId= li.data('noteId');
+    var url='note/getNoteContent.do';
+    var data={noteId:noteId};
+    $.getJSON(url,data,function (result) {
+        if(result.state==SUCCESS){
+            var data=result.data;
+            var editor=$('#myEditor').data('editor');
+            $('#noput_note_body').empty();
+            //把标题，body等信息填进预览页面
+            $('#note_title_content').html('');
+            $('#note_title_content').html(data.title);
+            $('#input_note_title').attr("value", data.title);
+            editor.txt.html(data.body);
+            $('#noput_note_body').append(data.body);
+
+        }
+    })
 }
 
-/***
- * 创建普通笔记
+/**
+ *弹出一个添加笔记的对话框
  */
-function createNormalNote() {
-    alert("创建普通笔记");
+function showAddNoteDialog() {
+    $('#can').load('alert/alert_note.html', function () {
+        //显示遮罩
+        $('.opacity_bg').show();
+        //focus对话框里的输入框
+        $('#input_note').focus();
+    });
 }
 
-/***
- * 加载普通笔记
+/**
+ * 添加笔记
  */
-function getNormalNoteList() {
-    console.log("加载普通笔记");
+function addNote() {
+    var title = $('#input_note').val().trim();
+    if (title == null || title == '') {
+        alert("笔记标题不能为空");
+        return;
+    }
+    var userId = getCookie('userId');
+    if (userId == null || userId == '') {
+        alert("userId不能为空");
+        window.location.href = 'login.html';
+    }
+    var notebookId = $('#notebook-list').find('.checked').parent().data('notebookId');
+    if (notebookId == null || notebookId == '') {
+        alert("请选择笔记本");
+        return;
+    }
+    var body = null;
+    var url = "note/addNote.do";
+    var data = {notebookId: notebookId, userId: userId, title: title, body: body};
+    $.getJSON(url, data, function (result) {
+        if (result.state == SUCCESS) {
+            alert("笔记创建成功");
+            $('#notebook-list').find('.checked').parent().click();
+            $('.cancle').click();
+            return;
+        } else {
+            alert(result.message);
+            //把title输入框置为空
+            $('#input_note').html('');
+            $('.cancle').click();
+            return;
+        }
+    });
 }
 
-/***
- * 更新普通笔记
+/**
+ *关掉添加笔记的对话框,按添加笔记对话框上的叉叉或者取消按钮时执行
  */
-function updateNormalNote() {
-    alert("更新普通笔记");
+function closeDialog() {
+    $('.opacity_bg').hide();
+    $('#can').empty();
 }
 
-/***
- * 删除普通笔记
+/**
+ * 修改笔记，点击保存修改按钮执行(待完成)
  */
-function deleteNormalNote() {
-    alert("删除普通笔记");
+function updateNote(){
+    //得到笔记编辑区里的标题
+    var title=$('#input_note_title').val().trim();
+    //得到笔记编辑区的body
+    var editor=$('#myEditor').data('editor');
+    var body=editor.txt.html();
+    //拿到当前选定的笔记li绑定的笔记id
+    var noteId=$('#note-list .checked').parent().data('noteId');
+    var data={title:title,body:body,noteId:noteId};
+    var url='/note/updateNote.do';
+    $.getJSON(url,data,function (result) {
+        if(result.state==SUCCESS){
+            alert("笔记修改成功");
+            //得到当前被选中的笔记本li，刷新笔记列表
+            var notebookId=$('#notebook-list .checked').parent().data('notebookId');
+            loadNotesByNotebookId(notebookId);
+            openPreviewPanel();
+            return;
+        }else{
+            alert(result.message);
+            return;
+        }
+    })
 }
 
-/***
- * 移动笔记
+/**
+ * 这个函数用来打开预览界面并重新加载预览
  */
-function moveNote() {
-    alert("移动笔记");
+function openPreviewPanel() {
+    $('#preview_note_panel').css('display','inline');
+    $('#edit_note_panel').css('display','none');
 }
+
+/**
+ * 这个函数用来打开编辑界面并加载内容
+ */
+function openEditPanel() {
+    $('#preview_note_panel').css('display','none');
+    $('#edit_note_panel').css('display','inline');
+}
+//---------------------------------------------------------------------------------
+
 
 /***
  * 分享笔记
