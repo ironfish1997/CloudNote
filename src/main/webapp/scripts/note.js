@@ -18,6 +18,8 @@ $(function () {
     //冒泡监听
     $('#can').on('click', '.create-note', addNote);
     $('#can').on('click', '.cancel,.close', closeDialog);
+    //点击按钮打开笔记的下拉列表
+    $('#note-list').on("click", ".btn_slide_down", handleNoteBottom);
 });
 
 //-------------------------显示所有笔记本的函数--------------------------------------
@@ -94,7 +96,7 @@ function loadNotes() {
  * 利用notebookId来加载笔记本下所有笔记
  * @param notebookId
  */
-function loadNotesByNotebookId(notebookId){
+function loadNotesByNotebookId(notebookId) {
     //找到当前被选中的笔记本li
     var url = 'note/list.do';
     var data = {notebookId: notebookId};
@@ -150,14 +152,14 @@ function chooseNote() {
     var li = $(this);
     li.parent().find('a').removeClass('checked');
     li.find('a').addClass('checked');
-    $('#edit_note').css('display','inline');
-    var noteId= li.data('noteId');
-    var url='note/getNoteContent.do';
-    var data={noteId:noteId};
-    $.getJSON(url,data,function (result) {
-        if(result.state==SUCCESS){
-            var data=result.data;
-            var editor=$('#myEditor').data('editor');
+    $('#edit_note').css('display', 'inline');
+    var noteId = li.data('noteId');
+    var url = 'note/getNoteContent.do';
+    var data = {noteId: noteId};
+    $.getJSON(url, data, function (result) {
+        if (result.state == SUCCESS) {
+            var data = result.data;
+            var editor = $('#myEditor').data('editor');
             $('#noput_note_body').empty();
             //把标题，body等信息填进预览页面
             $('#note_title_content').html('');
@@ -229,27 +231,27 @@ function closeDialog() {
 }
 
 /**
- * 修改笔记，点击保存修改按钮执行(待完成)
+ * 修改笔记，点击保存修改按钮执行
  */
-function updateNote(){
+function updateNote() {
     //得到笔记编辑区里的标题
-    var title=$('#input_note_title').val().trim();
+    var title = $('#input_note_title').val().trim();
     //得到笔记编辑区的body
-    var editor=$('#myEditor').data('editor');
-    var body=editor.txt.html();
+    var editor = $('#myEditor').data('editor');
+    var body = editor.txt.html();
     //拿到当前选定的笔记li绑定的笔记id
-    var noteId=$('#note-list .checked').parent().data('noteId');
-    var data={title:title,body:body,noteId:noteId};
-    var url='/note/updateNote.do';
-    $.getJSON(url,data,function (result) {
-        if(result.state==SUCCESS){
+    var noteId = $('#note-list .checked').parent().data('noteId');
+    var data = {title: title, body: body, noteId: noteId};
+    var url = '/note/updateNote.do';
+    $.getJSON(url, data, function (result) {
+        if (result.state == SUCCESS) {
             alert("笔记修改成功");
             //得到当前被选中的笔记本li，刷新笔记列表
-            var notebookId=$('#notebook-list .checked').parent().data('notebookId');
+            var notebookId = $('#notebook-list .checked').parent().data('notebookId');
             loadNotesByNotebookId(notebookId);
             openPreviewPanel();
             return;
-        }else{
+        } else {
             alert(result.message);
             return;
         }
@@ -257,20 +259,32 @@ function updateNote(){
 }
 
 /**
+ * 点击笔记下拉按钮,打开选项下拉列表
+ */
+function handleNoteBottom() {
+    //先把所有的下拉框关闭,用异步方法把点击的菜单再弹出来
+    $('.note-menu').hide(function(){
+        //toggle:点击同一个按钮在显示与隐藏之间切换
+        $(this).parent().next().toggle();
+    });
+}
+
+/**
  * 这个函数用来打开预览界面并重新加载预览
  */
 function openPreviewPanel() {
-    $('#preview_note_panel').css('display','inline');
-    $('#edit_note_panel').css('display','none');
+    $('#preview_note_panel').css('display', 'inline');
+    $('#edit_note_panel').css('display', 'none');
 }
 
 /**
  * 这个函数用来打开编辑界面并加载内容
  */
 function openEditPanel() {
-    $('#preview_note_panel').css('display','none');
-    $('#edit_note_panel').css('display','inline');
+    $('#preview_note_panel').css('display', 'none');
+    $('#edit_note_panel').css('display', 'inline');
 }
+
 //---------------------------------------------------------------------------------
 
 

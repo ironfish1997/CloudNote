@@ -114,32 +114,6 @@ $(function(){
         getNoteDetail();
     }),
 
-        //----打开创建笔记界面
-        $(document).on("click", "#add_note", function() {
-            $('#can').load('./alert/alert_note.html',function() {
-                $('#input_note').focus();
-            });
-            $('.opacity_bg').show();
-        }),
-
-        //----创建笔记
-        $(document).on("click", "#modalBasic_2 .btn.btn-primary.sure", function() {
-            //保存
-            createNormalNote();
-        }),
-
-        //----保存笔记内容
-        $(document).on("click","#save_note", function() {
-            //修改
-            updateNormalNote();
-        }),
-
-        //----点击笔记下拉按钮
-        $(document).on("click", ".btn_slide_down", function() {
-            $(this).parents('li').children('.note_menu').addClass('note_menu_show').mouseleave(function(){
-                $(this).removeClass('note_menu_show');
-            });
-        }),
 
         //----打开删除笔记界面
         $(document).on("click", "#second_side_right .btn_delete", function() {

@@ -6,4 +6,4 @@ $(document).on("click", "#add_notebook", function() {
         $('#input_notebook').focus();
     });
     $('.opacity_bg').show();
-}),
+})
