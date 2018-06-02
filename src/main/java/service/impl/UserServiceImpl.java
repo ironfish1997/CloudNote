@@ -3,6 +3,7 @@ package service.impl;
 import dao.UserDao;
 import entity.User;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import service.PasswordException;
@@ -29,7 +30,7 @@ public class UserServiceImpl implements UserService {
         if (password == null || password.trim().isEmpty()) {
             throw new PasswordException("密码为空");
         }
-        password=DigestUtils.md5Hex(salt+password.trim());
+        password = DigestUtils.md5Hex(salt + password.trim());
         User user = userDao.findUserByName(name.trim());
 
         if (user == null) {
@@ -71,6 +72,30 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("添加失败");
         }
         return user;
+    }
+
+    @Override
+    public boolean Update(String name, String originPassword,String password, String confirm) throws UserNotFoundException, PasswordException {
+        //检查用户名，密码，确认密码是否格式正确
+        if(name==null||name.trim().isEmpty()){
+            throw new UserNotFoundException("用户id为空");
+        }
+        if(password==null||password.trim().isEmpty()){
+            throw new PasswordException("密码为空");
+        }
+        String passwordConf=confirm.trim();
+        if(confirm==null||!(passwordConf.equals(password.trim()))){
+            throw new PasswordException("确认密码不一致");
+        }
+        User user=Login(name,originPassword);
+        //数据库里没有这个账号就报错
+        if(user==null){
+            throw new UserNotFoundException("账号不存在");
+        }
+        String password2 = DigestUtils.md5Hex(salt + password.trim());
+        user.setPassword(password2);
+        int n=userDao.updateUser(user);
+        return n==1;
     }
 
 }
