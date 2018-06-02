@@ -13,8 +13,12 @@ public interface NoteDao {
 
     Map<String, Object> findNoteByNoteId(String noteId);
 
+    List<Map<String, Object>> findAllNotes();
+
     int addNote(@Param("note") Note note);
 
     int updateNote(@Param("note") Note note);
+
+    int deleteNote(String noteId);
 
 }

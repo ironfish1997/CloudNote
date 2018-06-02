@@ -1,6 +1,7 @@
 package dao;
 
 import entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository("userDao")
@@ -10,4 +11,6 @@ public interface UserDao {
     int addUser(User user);
 
     User findUserById(String userId);
+
+    int updateUser(@Param("user") User user);
 }
