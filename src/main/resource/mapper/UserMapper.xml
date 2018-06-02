@@ -42,5 +42,11 @@
         where
             cn_user_id = #{userId}
     </select>
+    
+    <update id="updateUser" parameterType="entity.User">
+        update cn_user
+        set cn_user_password=#{user.password}
+        where cn_user_name=#{user.name}
+    </update>
 
 </mapper>

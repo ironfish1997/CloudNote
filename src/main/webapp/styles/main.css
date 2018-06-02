@@ -8497,7 +8497,7 @@ table.fc-border-separate {
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,700,600,800);
 
 body {
-    background: #ecf0f1;
+    background: lightblue;
     font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
     overflow-x: hidden
 }

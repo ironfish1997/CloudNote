@@ -23,13 +23,20 @@ public class NoteServiceTest extends BaseTest {
     public void testUpdateNote() {
         NoteDao dao = ctx.getBean("noteDao", NoteDao.class);
         NoteService service2 = ctx.getBean("noteService", NoteService.class);
-        String noteId = "87dcaa0c-d0f3-43e9-9bf8-faf6b0462708";
+        String noteId = "75bac888-66d4-4c9c-a283-64ad60a3f0bd";
         System.out.println(dao.findNoteByNoteId(noteId));
         String title = "hello";
         String body = "yywo";
         service2.updateNote(noteId, title, body);
         Map<String,Object> map= dao.findNoteByNoteId(noteId);
         System.out.println(map);
+    }
+
+    @Test
+    public void testTrashNote(){
+        String noteId="75bac888-66d4-4c9c-a283-64ad60a3f0bd";
+        NoteService service2 = ctx.getBean("noteService", NoteService.class);
+        System.out.println(service2.trashNote(noteId,"delete"));
     }
 
     @Test
@@ -46,6 +53,22 @@ public class NoteServiceTest extends BaseTest {
         List<Map<String, Object>> list=dao.findNotesByNoteBookId(notebookId);
         for(Map<String,Object> map:list){
             System.out.println(map);
+        }
+    }
+
+    @Test
+    public void testDeleteNote(){
+        String noteId="0e95fd5f-2cd9-43b7-8794-b23683091eb2";
+        NoteService dao = ctx.getBean("noteService",NoteService.class);
+        dao.deleteNote(noteId);
+    }
+
+    @Test
+    public void testListAllNotes(){
+        NoteService dao = ctx.getBean("noteService",NoteService.class);
+        List list=dao.listAllNotes();
+        for(Object obj:list){
+            System.out.println(obj);
         }
     }
 }

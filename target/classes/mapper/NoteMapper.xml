@@ -3,6 +3,23 @@
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="dao.NoteDao">
 
+    <!-- 拿到所有的笔记 -->
+    <select id="findAllNotes" resultType="map">
+        select
+            cn_note_id as id,
+            cn_notebook_id as notebookId,
+            cn_user_id as userId,
+            cn_note_status_id as statusId,
+            cn_note_type_id as typeId,
+            cn_note_title as title,
+            cn_note_body as body,
+            cn_note_create_time as createTime,
+            cn_note_last_modify_time as lastModifyTime
+        from
+            cn_note
+        where 1=1
+    </select>
+
     <!-- 这个查询是查询完整的笔记信息 -->
     <select id="findCompleteNotesByNoteBookId" parameterType="string" resultType="map">
         select
@@ -26,8 +43,15 @@
     <!-- 这个查询是仅仅只查询id和title，用于显示列表，可以节省网络流量-->
     <select id="findNotesByNoteBookId" parameterType="string" resultType="map">
         select
-            cn_note_id as id,
-            cn_note_title as title
+           cn_note_id as id,
+            cn_notebook_id as notebookId,
+            cn_user_id as userId,
+            cn_note_status_id as statusId,
+            cn_note_type_id as typeId,
+            cn_note_title as title,
+            cn_note_body as body,
+            cn_note_create_time as createTime,
+            cn_note_last_modify_time as modifyTime
         from
             cn_note
         where
@@ -102,4 +126,11 @@
         where
             cn_note_id =#{noteId}
     </select>
+
+    <delete id="deleteNote" parameterType="string">
+        delete from
+            cn_note
+        where
+            cn_note_id = #{noteId}
+    </delete>
 </mapper>

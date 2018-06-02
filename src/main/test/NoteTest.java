@@ -54,4 +54,25 @@ public class NoteTest extends BaseTest {
         NoteDao dao=ctx.getBean("noteDao",NoteDao.class);
         System.out.println(dao.findNoteByNoteId(noteId));
     }
+
+    //pass
+    @Test
+    public void testDeleteNote(){
+        String noteId="fd5109ec-5a9f-4dd5-88bf-53c23ab87e98";
+        NoteDao dao=ctx.getBean("noteDao",NoteDao.class);
+        dao.deleteNote(noteId);
+    }
+
+    @Test
+    public void testFindAllNotes(){
+        NoteDao dao=ctx.getBean("noteDao",NoteDao.class);
+        List<Map<String, Object>> result=dao.findAllNotes();
+        for(Map map:result){
+            for (Object entry : map.entrySet()) {
+                Map.Entry entry1=(Map.Entry<String,Object>)entry;
+                System.out.print(entry1.getKey()+":"+entry1.getValue()+" ");
+            }
+            System.out.println();
+        }
+    }
 }

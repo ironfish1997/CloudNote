@@ -22,4 +22,24 @@
         from cn_notebook
         where cn_notebook_id =#{notebookId}
     </select>
+
+    <insert id="addNotebook" parameterType="entity.Notebook">
+        insert into
+            cn_notebook
+       values(
+            #{notebook.id},
+            #{notebook.userId},
+            #{notebook.typeId},
+            #{notebook.name},
+            #{notebook.descr},
+            #{notebook.createTime}
+       )
+    </insert>
+    
+    <delete id="deleteNotebook" parameterType="string">
+        delete from
+            cn_notebook
+        where
+            cn_notebook_id=#{notebookId}
+    </delete>
 </mapper>

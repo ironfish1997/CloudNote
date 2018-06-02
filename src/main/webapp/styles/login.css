@@ -8,7 +8,10 @@
 	position:absolute;
 	left:50%;
 	top:50%;
-	background:red;
+}
+
+body{
+	background: lightblue;
 }
 .log,.sig{
 	width:500px;

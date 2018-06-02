@@ -29,4 +29,13 @@ public class UserServiceTest extends BaseTest {
         User user=service.Register("Andy","123","ann","123");
         System.out.println(user);
     }
+
+    @Test
+    public void testUpdate(){
+        String name="liuliyong";
+        String originPassword="123456";
+        String password="1234567";
+        String confirm="1234567";
+        service.Update(name,originPassword,password,confirm);
+    }
 }

@@ -1,3 +1,5 @@
+var SUCCESS = 0;
+var ERROR = 1;
 /**
  * 页面初始化后，绑定函数。
  */
@@ -26,6 +28,7 @@ $(function () {
 
 });
 
+//检验用户名是否符合要求
 function checkName() {
     var name = $('#count').val();
     var rule = /^\w{4,10}$/;//从头到尾最多10个，最少4个字符
@@ -37,6 +40,7 @@ function checkName() {
     return true;
 }
 
+//检验密码是否符合要求
 function checkPassword() {
     var password = $('#password').val();
     var rule = /^\w{6,10}$/;//从头到尾最多10个，最少6个字符
@@ -75,8 +79,8 @@ function checkRegisterPassword() {
 
 //检验两次密码输入是否一致
 function checkPasswordConfirm() {
-    var password = $('#regist_password').val().trim();
-    var confirm = $('#final_password').val().trim();
+    var password = $('#regist_password').val();
+    var confirm = $('#final_password').val();
     if (confirm && password == confirm) {
         $('#final_password').next().hide();
         return true;
@@ -110,7 +114,7 @@ function register() {
         dataType: 'json',
         success: function (result) {
             console.log(result);
-            var msg=result.message;
+            var msg = result.message;
             if (result.state == 0) {
                 //注册成功
                 var user = result.data;
@@ -129,11 +133,11 @@ function register() {
                 $('#final_password').val('');
             } else {
                 //密码错误
-                if(result.state==2){
+                if (result.state == 2) {
                     $('#regist_password').next().show().find('span').html(msg);
                 }
                 //其他错误
-                else{
+                else {
                     $('#regist_username').next().show().find('span').html(msg);
                 }
                 return;
@@ -154,7 +158,10 @@ function login() {
         return;
     }
     //data对象中的属性名要与服务器控制器的参数名一致
-    var data = {"name": name, "password": password};
+    var data = {
+        "name": name,
+        "password": password
+    };
     $.ajax({
         url: 'user/login.do',
         data: data,
@@ -168,13 +175,13 @@ function login() {
                 $('#count').next().html('登录成功');
                 console.log(user);
                 //保存登录的userId到cookie
-                addCookie("userId",user.id );
+                addCookie("userId", user.id);
                 //成功后跳转到edit.html
                 location.href = 'edit.html';
             } else {
                 var msg = result.message;
                 //密码错误
-                if (result.state==2) {
+                if (result.state == 2) {
                     $('#password').next().html(msg);
                 } else {
                     $('#count').next().html(msg);
@@ -199,8 +206,76 @@ function logout() {
  * 修改密码
  */
 function changepwd() {
-    alert("修改成功.");
-    logout();
+    var original_password = $('#last_password').val();
+    var new_password = $('#new_password').val();
+    var final_password = $('#final_password').val();
+    var user = getCookie('userName');
+    //检查新密码的格式和两次密码是否一致
+    var n = checkUpdatePassword() * checkUpdatePasswordConfirm();
+    if (n != 1) {
+        return;
+    }
+    $.ajax({
+        url: 'user/login.do',
+        data: {"name": user, "password": original_password},
+        type: 'post',
+        dataType: 'json',
+        success: function (result) {
+            //返回成功证明原始密码正确
+            if (result.state == SUCCESS) {
+                //json定义user对象
+                $.post(
+                    'user/update.do',
+                    {
+                        name: getCookie('userName'),
+                        origin: original_password,
+                        password: new_password,
+                        confirm: final_password
+                    },
+                    function (result) {
+                        if (result.state == SUCCESS) {
+                            alert("密码修改成功,请用新密码登录");
+                            window.location.href = "/login.html";
+                        } else {
+                            alert("密码修改失败,请稍后重试");
+                            window.location.href = "/login.html";
+                        }
+                    }
+                )
+            } else {
+                //如果登录不成功则代表原始密码有误
+                $('#last_password').next().show();
+            }
+        },
+        error: function (e) {
+            alert('服务器没有响应，请稍后重试');
+        }
+    });
 }
 
+//检验修改密码是否符合要求
+function checkUpdatePassword() {
+    var passwo = $('#new_password').val();
+    var rule = /^\w{6,10}$/;//从头到尾最多10个，最少6个字符
+    $('#warning_2').hide();
+    if (!rule.test(passwo)) {
+        $('#warning_2').show().find('span').html("允许6~10字符");
+        return false;
+    }
+    $('#warning_2').hide();
+    return true;
+}
+
+//检验两次密码输入是否一致
+function checkUpdatePasswordConfirm() {
+    var password = $('#new_password').val();
+    var confirm = $('#final_password').val();
+    if (confirm && password == confirm) {
+        $('#final_password').next().hide();
+        return true;
+    } else {
+        $('#final_password').next().show();
+        return false;
+    }
+}
 
