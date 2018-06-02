@@ -3,6 +3,8 @@ package entity;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 @Component("notebook")
@@ -13,12 +15,12 @@ public class Notebook implements Serializable {
     private String typeId=null;
     private String name=null;
     private String descr=null;
-    private Long createTime=0L;
+    private Timestamp createTime=null;
 
     public Notebook() {
     }
 
-    public Notebook(String id, String userId, String typeId, String name, String descr, Long createTime) {
+    public Notebook(String id, String userId, String typeId, String name, String descr, Timestamp createTime) {
         this.id = id;
         this.userId = userId;
         this.typeId = typeId;
@@ -67,11 +69,11 @@ public class Notebook implements Serializable {
         this.descr = descr;
     }
 
-    public Long getCreateTime() {
+    public Timestamp getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Long createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 
