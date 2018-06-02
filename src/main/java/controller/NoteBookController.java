@@ -24,5 +24,18 @@ public class NoteBookController extends AbstractController{
         return new JsonResult(list);
     }
 
+    @RequestMapping("/addNotebook.do")
+    @ResponseBody
+    public JsonResult add(String name,String userId){
+        Object isSuccess=noteBookService.addNotebook(name,userId);
+        return new JsonResult(isSuccess);
+    }
+
+    @RequestMapping("/deleteNotebook.do")
+    @ResponseBody
+    public JsonResult delete(String notebookId){
+        Object isSuccess=noteBookService.deleteNotebook(notebookId);
+        return new JsonResult(isSuccess);
+    }
 
 }
