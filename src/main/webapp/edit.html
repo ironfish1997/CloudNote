@@ -5,7 +5,6 @@
     <title>我的笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/favico-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/favico-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/favico-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/favico-57-precomposed.png">
     <link rel="shortcut icon" href="ico/favico.png">
@@ -16,15 +15,15 @@
     <link rel="stylesheet" href="styles/prettify.css"/>
 </head>
 <body class="animated fadeIn">
-<header class="header" style="background: url(images/in_top_bj.jpg);">
+<header class="header">
     <div class="header-brand">
         <a data-pjax=".content-body" href="edit.html">
-            <img class="brand-logo" src="images/dummy/8986f28e.stilearn-logo.png" alt="Stilearn Admin Sample Logo">
+            <img class="brand-logo" src="images/icons.png" alt="liuliyong Admin Sample Logo">
         </a>
     </div>
     <div class="header-profile">
         <div class="profile-nav">
-            <span class="profile-username">Leo</span>
+            <span class="profile-username"></span>
             <a class="dropdown-toggle" data-toggle="dropdown">
                 <span class="fa fa-angle-down"></span>
             </a>
@@ -35,25 +34,13 @@
             </ul>
         </div>
     </div>
-    <form class="form-inline" onsubmit="return false;">
-        <button type="button" class="btn btn-default btn-expand-search"><i class="fa fa-search"></i></button>
-        <div class="toggle-search">
-            <input type="text" class="form-control" placeholder="搜索笔记" id='search_note'>
-            <button type="button" class="btn btn-default btn-collapse-search"><i class="fa fa-times"></i></button>
-        </div>
-    </form>
-    <ul class="hidden-xs header-menu pull-right">
-        <li>
-            <a href="activity.html" target='_blank' title="笔记活动">活动</a>
-        </li>
-    </ul>
 </header>
 
 <!-- 全部笔记本 -->
 <div class="row" style='padding:0;' id='center'>
     <!-- alert_background-->
     <div class="opacity_bg" style='display:none'></div>
-    <!-- alert_notebook -->
+    <!-- 这个div是用来装有关notebook的弹窗的 -->
     <div id="can"></div>
     <div class="col-xs-2" style='padding:0;' id='notebook-list'>
         <!-- side-right -->
@@ -85,14 +72,8 @@
             </div>
         </aside>
         <div class="row clear_margin">
-            <div class="col-xs-4 click" id='rollback_button' title='回收站'><i class='fa fa-trash-o'
-                                                                            style='font-size:20px;line-height:31px;'></i>
-            </div>
-            <div class="col-xs-4 click" id='like_button' title='收藏笔记本'><i class='fa fa-star'
-                                                                          style='font-size:20px;line-height:31px;'></i>
-            </div>
-            <div class="col-xs-4 click" id='action_button' title='参加活动笔记'><i class='fa fa-users'
-                                                                             style='font-size:20px;line-height:30px;'></i>
+            <div class="col-xs-12 click" id='rollback_button' title='回收站'><i class='fa fa-trash-o'
+                                                                             style='font-size:20px;line-height:31px;'></i>
             </div>
         </div>
     </div>
@@ -118,7 +99,7 @@
     </div>
 
     <!-- 回收站笔记 -->
-    <div class="col-xs-3" style='padding:0;display:none;' id='pc_part_4'>
+    <div class="col-xs-3" style='padding:0;display:none;' id='trash-bin'>
         <div class="pc_top_second">
             <h3>回收站笔记</h3>
         </div>
@@ -126,81 +107,19 @@
             <div class="module" data-toggle="niceScroll">
                 <div class="chat-contact">
                     <div class="contact-body">
-                        <ul class="contacts-list">
-                            <li class="disable"><a><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>
-                                ioc
-                                <button type="button" class="btn btn-default btn-xs btn_position btn_delete"><i
-                                        class="fa fa-times"></i></button>
-                                <button type="button" class="btn btn-default btn-xs btn_position_2 btn_replay"><i
-                                        class="fa fa-reply"></i></button>
-                            </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <!-- 搜索笔记列表 -->
-    <div class="col-xs-3" style='padding:0;display:none;' id='pc_part_6'>
-        <div class="pc_top_second">
-            <h3>搜索结果</h3>
-        </div>
-        <aside class="side-right" id='sixth_side_right'>
-            <div class="module" data-toggle="niceScroll">
-                <div class="chat-contact">
-                    <div class="contact-body">
-                        <ul class="contacts-list">
-                            <li class="online">
-                                <a href="#">
-                                    <i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i> Java IO
-                                    <button type="button" class="btn btn-default btn-xs btn_position btn_like"><i
-                                            class="fa fa-star-o"></i></button>
-                                    <div class="time"></div>
+                        <ul class="contacts-list" id="trash_show_li">
+                            <li class="disable">
+                                <a>
+                                    <i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>
+                                    ioc
+                                    <button type="button" class="btn btn-default btn-xs btn_position btn_delete">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-xs btn_position_2 btn_replay">
+                                        <i class="fa fa-reply"></i>
+                                    </button>
                                 </a>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id='more_note'>更多...</div>
-            </div>
-        </aside>
-    </div>
-
-    <!-- 收藏笔记列表 -->
-    <div class="col-xs-3" style='padding:0;display:none;' id='pc_part_7'>
-        <div class="pc_top_second">
-            <h3>已收藏笔记</h3>
-        </div>
-        <aside class="side-right" id='seventh_side_right'>
-            <div class="module" data-toggle="niceScroll">
-                <div class="chat-contact">
-                    <div class="contact-body">
-                        <ul class="contacts-list">
-                            <li class="idle"><a><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>
-                                switch多分支结构
-                                <button type="button" class="btn btn-default btn-xs btn_position btn_delete"><i
-                                        class="fa fa-times"></i></button>
-                            </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <!-- 参加活动的笔记列表 -->
-    <div class="col-xs-3" style='padding:0;display:none;' id='pc_part_8'>
-        <div class="pc_top_second">
-            <h3>参加活动的笔记</h3>
-        </div>
-        <aside class="side-right" id='eighth_side_right'>
-            <div class="module" data-toggle="niceScroll">
-                <div class="chat-contact">
-                    <div class="contact-body">
-                        <ul class="contacts-list">
-                            <li class="offline"><a><i class="fa fa-file-text-o" title="online" rel="tooltip-bottom"></i>
-                                样式用例</a></li>
                         </ul>
                     </div>
                 </div>
@@ -226,7 +145,7 @@
                 <div class="chat-contact">
                     <div class="contact-body clear_margin">
                         <!--- 笔记标题 --->
-                        <div class="row" >
+                        <div class="row">
                             <div class="col-xs-8">
                                 <input type="text" class="form-control" id="input_note_title" placeholder='笔记标题...'>
                             </div>
@@ -235,7 +154,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <!--- 输入框 --->
-                                <div id="myEditor" ></div>
+                                <div id="myEditor"></div>
                             </div>
                         </div>
                     </div>
@@ -252,7 +171,9 @@
                     <h3 id="note_title_content">笔记内容</h3>
                 </div>
                 <div class="col-xs-3">
-                    <button type="button" class="btn btn-block btn-sm btn-primary" id='edit_note' style="display:none">编辑笔记</button>
+                    <button type="button" class="btn btn-block btn-sm btn-primary" id='edit_note' style="display:none">
+                        编辑笔记
+                    </button>
                 </div>
             </div>
         </div>
@@ -273,10 +194,12 @@
 </div>
 
 <footer style="border-bottom: 0px;">
-    <p>&copy; 2018 Liuliyong</p>
-    <div style='position:absolute;top:5PX;height:30px;right:20px;line-height:26px;border:1px solid #0E7D76;display:none;background:#fff'>
-        <strong style='color:#0E7D76;margin:0 10px;'></strong>
-    </div>
+    <p style="float: left;">&copy; 2018 Liuliyong</p>
+    <p style="float: right; font-size: smaller">
+        <a href="http://www.wangeditor.com/"
+           target="_blank"
+           style="text-decoration: none; color: inherit;">powered by &copyWangEditor</a>
+    </p>
 </footer>
 </body>
 </html>
@@ -292,9 +215,7 @@
         get_dom('first_side_right').style.height = (pc_height - 31) + 'px';
         get_dom('second_side_right').style.height = pc_height + 'px';
         get_dom('four_side_right').style.height = pc_height + 'px';
-        get_dom('sixth_side_right').style.height = pc_height + 'px';
-        get_dom('seventh_side_right').style.height = pc_height + 'px';
-        get_dom('eighth_side_right').style.height = pc_height + 'px';
+        // get_dom('sixth_side_right').style.height = pc_height + 'px';
         get_dom('third_side_right').style.height = (pc_height - 15) + 'px';
         get_dom('fifth_side_right').style.height = (pc_height - 15) + 'px';
     }
@@ -337,15 +258,18 @@
 <script src="scripts/wangEditor.js"></script>
 <script>
     $(document.body).css({
-        "overflow-x":"hidden",
-        "overflow-y":"hidden"
+        "overflow-x": "hidden",
+        "overflow-y": "hidden"
     });
     //实例化
-    window.onload=function () {
+    window.onload = function () {
+        //设置用户名的显示
+        var username = getCookie('userName');
+        $('.profile-username').text(username);
         var E = window.wangEditor;
         var editor = new E('#myEditor');
-        editor.customConfig.initialFrameWidth='100%';
+        editor.customConfig.initialFrameWidth = '100%';
         editor.create();
-        $('#myEditor').data('editor',editor);
+        $('#myEditor').data('editor', editor);
     }
 </script>
