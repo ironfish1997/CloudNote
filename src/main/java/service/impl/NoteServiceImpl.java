@@ -21,7 +21,6 @@ public class NoteServiceImpl implements NoteService {
 
     /**
      * 根据笔记本的id查询所有笔记
-     *
      * @param notebookId
      * @return
      * @throws NotebookNotFoundException
@@ -39,6 +38,14 @@ public class NoteServiceImpl implements NoteService {
     }
 
     /**
+     * 查询所有笔记
+     */
+    @Override
+    public List<Map<String, Object>> listAllNotes(){
+        return noteDao.findAllNotes();
+    }
+
+    /**
      * 根据笔记id查询笔记详细内容
      * @param noteId
      * @return
@@ -52,10 +59,27 @@ public class NoteServiceImpl implements NoteService {
         return noteDao.findNoteByNoteId(noteId);
     }
 
+    /**
+     * 删除笔记,根据noteId
+     * @param noteId
+     * @return
+     * @throws NoteNotFoundException
+     */
+    @Override
+    public boolean deleteNote(String noteId) throws NoteNotFoundException {
+        if(noteId==null||noteId.trim().isEmpty()){
+            throw new NoteNotFoundException("noteId不能为空");
+        }
+        Map note=noteDao.findNoteByNoteId(noteId);
+        if(note==null){
+            throw new NoteNotFoundException("笔记找不到");
+        }
+        return noteDao.deleteNote(noteId)==1;
+    }
+
 
     /**
      * 新增笔记
-     *
      * @param notebookId
      * @param userId
      * @param body
@@ -82,7 +106,7 @@ public class NoteServiceImpl implements NoteService {
         note.setId(id);
         note.setBody(body);
         note.setNotebookId(notebookId);
-        note.setStatusId(null);
+        note.setStatusId("normal");
         note.setTypeId(null);
         note.setTitle(title);
         note.setUserId(userId);
@@ -128,4 +152,57 @@ public class NoteServiceImpl implements NoteService {
         int n=noteDao.updateNote(noteUpdated);
         return n==1;
     }
+
+
+    @Override
+    public boolean trashNote(String noteId,String statusId) throws NoteNotFoundException{
+        if(noteId==null||noteId.trim().isEmpty()){
+            throw new NoteNotFoundException("noteId为空");
+        }
+        Map note=noteDao.findNoteByNoteId(noteId);
+        if(note==null){
+            throw new NoteNotFoundException("笔记不存在");
+        }
+        Note noteUpdated =new Note();
+        noteUpdated.setStatusId(statusId);
+        noteUpdated.setId(noteId);
+        int n=noteDao.updateNote(noteUpdated);
+        return n==1;
+    }
+
+
+    /**
+     * 移动笔记时用的，把笔记的笔记本id给改了
+     * @param noteId
+     * @param notebookId
+     * @return
+     * @throws NotebookNotFoundException
+     * @throws NoteNotFoundException
+     */
+    @Override
+    public boolean updateNote(String noteId, String notebookId) throws NotebookNotFoundException, NoteNotFoundException {
+        if(noteId==null||noteId.trim().isEmpty()){
+            throw new NoteNotFoundException("noteId为空");
+        }
+        if(notebookId==null||notebookId.trim().isEmpty()){
+            throw new NotebookNotFoundException("notebookId为空");
+        }
+        Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
+        if(notebook==null){
+            throw new NotebookNotFoundException("目标笔记本不存在");
+        }
+        Map<String,Object> map=noteDao.findNoteByNoteId(noteId);
+        if(map==null||map.isEmpty()){
+            throw new NoteNotFoundException("没有对应的笔记");
+        }
+
+        Note noteUpdated =new Note();
+        noteUpdated.setId(noteId);
+        noteUpdated.setNotebookId(notebookId);
+        noteUpdated.setModifyTime(System.currentTimeMillis());
+        int note=noteDao.updateNote(noteUpdated);
+        return note==1;
+    }
+
+
 }
