@@ -11,7 +11,7 @@ public class Note implements Serializable {
     private String id=null;
     private String notebookId=null;
     private String userId=null;
-    private String statusId=null;
+    private String statusId=null; //normal为正常，delete为被删除
     private String typeId=null;
     private String title=null;
     private String body=null;
