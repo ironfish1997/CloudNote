@@ -2,14 +2,18 @@ package service.impl;
 
 import dao.NotebookDao;
 import dao.UserDao;
+import entity.Notebook;
 import entity.User;
 import org.springframework.stereotype.Service;
 import service.NoteBookService;
+import service.NotebookNotFoundException;
 import service.UserNotFoundException;
 
 import javax.annotation.Resource;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Service("noteBookService")
 public class NoteBookServiceImpl implements NoteBookService {
@@ -17,17 +21,51 @@ public class NoteBookServiceImpl implements NoteBookService {
     @Resource
     private NotebookDao notebookDao;
     @Resource
-    private UserDao dao;
+    private UserDao userDao;
 
     @Override
     public List<Map<String, Object>> listNoteBooksByUserId(String userId) throws UserNotFoundException {
-        if(userId==null||userId.trim().isEmpty()){
+        if (userId == null || userId.trim().isEmpty()) {
             throw new UserNotFoundException("用户id为空");
         }
-        User user=dao.findUserById(userId);
-        if(user==null){
+        User user = userDao.findUserById(userId);
+        if (user == null) {
             throw new UserNotFoundException("用户不存在");
         }
         return notebookDao.findNotebooksByUserId(userId);
+    }
+
+    @Override
+    public boolean deleteNotebook(String notebookId) throws NotebookNotFoundException {
+        if(notebookId==null|| notebookId.trim().isEmpty()){
+            throw new NotebookNotFoundException("笔记本id为空");
+        }
+        Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
+        if(notebook==null){
+            throw new NotebookNotFoundException("笔记本不存在");
+        }
+        int i=notebookDao.deleteNotebook(notebookId);
+        return i==1;
+    }
+
+    @Override
+    public boolean addNotebook(String notebookName, String userId) throws UserNotFoundException {
+        //如果没有从前端拿到user的id，则抛出错误
+        if (userId == null || userId.trim().isEmpty()) {
+            throw new UserNotFoundException("用户id为空");
+        }
+        if (notebookName == null || notebookName.trim().isEmpty()) {
+            throw new NotebookNotFoundException("笔记本名称为空");
+        }
+        User user = userDao.findUserById(userId);
+        if (user == null) {
+            throw new UserNotFoundException("用户不存在");
+        }
+        Notebook notebook = new Notebook();
+        notebook.setId(UUID.randomUUID().toString());
+        notebook.setName(notebookName);
+        notebook.setUserId(userId);
+        notebook.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        return notebookDao.addNotebook(notebook) == 1;
     }
 }
