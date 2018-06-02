@@ -16,5 +16,5 @@ public interface UserService {
      */
     User Login(String name, String password) throws UserNotFoundException,PasswordException;
     User Register(String name,String password,String nick,String confirm) throws UserNameException,PasswordException;
-
+    boolean Update(String name, String originPassword,String password,String confirm) throws UserNotFoundException,PasswordException;
 }
