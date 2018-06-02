@@ -31,4 +31,10 @@ public class UserController extends AbstractController{
         User user=userService.Register(name,password,nick,confirm);
         return new JsonResult(user);
     }
+
+    @RequestMapping("/update.do")
+    @ResponseBody
+    public Object update(String name,String origin, String password , String confirm){
+        return new JsonResult(userService.Update(name,origin,password,confirm));
+    }
 }
