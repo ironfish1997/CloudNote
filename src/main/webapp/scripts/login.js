@@ -176,6 +176,7 @@ function login() {
                 console.log(user);
                 //保存登录的userId到cookie
                 addCookie("userId", user.id);
+                addCookie("userName", user.name);
                 //成功后跳转到edit.html
                 location.href = 'edit.html';
             } else {
