@@ -1,5 +1,6 @@
 import dao.NotebookDao;
 import entity.Notebook;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Timestamp;
@@ -44,5 +45,14 @@ public class NotebookTest extends BaseTest {
         String notebookId="69626d0d-82a2-4376-8972-c7bcf79b080d";
         NotebookDao dao=ctx.getBean("notebookDao",NotebookDao.class);
         dao.deleteNotebook(notebookId);
+    }
+
+    @Test
+    public void testUpdateNotebook(){
+        Notebook notebook=new Notebook();
+        notebook.setId("4e701af0-ae78-49c2-baa6-407904cdd69e");
+        notebook.setName("软件工程改名");
+        NotebookDao dao=ctx.getBean("notebookDao",NotebookDao.class);
+        dao.updateNotebook(notebook);
     }
 }

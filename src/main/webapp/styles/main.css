@@ -448,17 +448,17 @@
 }
 
 @-webkit-keyframes mapping {
-0% {
-    top: 0
-}
+    0% {
+        top: 0
+    }
 
-50% {
-    top: -5px
-}
+    50% {
+        top: -5px
+    }
 
-100% {
-    top: 0
-}
+    100% {
+        top: 0
+    }
 }
 
 .loader-dashboard {

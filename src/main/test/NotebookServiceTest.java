@@ -1,4 +1,4 @@
-import entity.Note;
+import dao.NotebookDao;
 import entity.Notebook;
 import org.junit.Test;
 import service.NoteBookService;
@@ -51,5 +51,17 @@ public class NotebookServiceTest extends BaseTest {
         String notebookId="52b7404b-1f7a-44c4-9406-e4716ff861b1";
         NoteBookService service=ctx.getBean("noteBookService",NoteBookService.class);
         service.deleteNotebook(notebookId);
+    }
+
+    /**
+     * 测试修改笔记本功能
+     */
+    @Test
+    public void testUpdateNotebook(){
+        NoteBookService noteBookService=ctx.getBean("noteBookService",NoteBookService.class);
+        NotebookDao notebookDao=ctx.getBean("notebookDao",NotebookDao.class);
+        Notebook notebook=notebookDao.findNotebookByNotebookId("4e701af0-ae78-49c2-baa6-407904cdd69e");
+        notebook.setName("编译原理Service改动");
+        noteBookService.updateNotebook(notebook.getId(),notebook.getUserId(),notebook.getName());
     }
 }

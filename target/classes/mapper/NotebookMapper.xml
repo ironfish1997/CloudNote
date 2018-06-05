@@ -23,6 +23,27 @@
         where cn_notebook_id =#{notebookId}
     </select>
 
+    <update id="updateNotebook" parameterType="entity.Notebook">
+        update cn_notebook
+        <trim prefix="set" suffixOverrides=",">
+        <if test="notebook.userId!=null">
+            cn_user_id=#{notebook.userId},
+        </if>
+        <if test="notebook.typeId!=null">
+            cn_notebook_type_id=#{notebook.typeId},
+        </if>
+        <if test="notebook.name!=null">
+            cn_notebook_name=#{notebook.name},
+        </if>
+        <if test="notebook.descr!=null">
+            cn_notebook_desc=#{notebook.descr},
+        </if>
+        </trim>
+        where
+            cn_notebook_id=#{notebook.id}
+    </update>
+
+
     <insert id="addNotebook" parameterType="entity.Notebook">
         insert into
             cn_notebook

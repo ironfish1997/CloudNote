@@ -6,82 +6,49 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9321755-1ddc-4cf7-9e74-f77de974768f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ico/icon.png" afterDir="false" />
+    <list default="true" id="c9321755-1ddc-4cf7-9e74-f77de974768f" name="Default" comment="做了较大改动，解决了页面刷新顺序，数据绑定等问题">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/conf/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/conf/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/NoteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/NoteServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/NoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/NoteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/NotebookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/NotebookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/NoteBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/NoteBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/NotebookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/NotebookServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/NotebookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/NotebookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/dummy/8986f28e.stilearn-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/dummy/8986f28e.stilearn-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/icons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/activity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scripts/notebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/notebook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/icon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/umeditor.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/conf/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/conf/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/prettify.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/NoteBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/NoteBookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/NoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/NoteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/NoteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/NoteDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/NotebookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/NotebookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/entity/Notebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/entity/Notebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/NoteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/NoteMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/NotebookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/NotebookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/NoteBookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/NoteBookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/NoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/NoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/NoteBookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/NoteBookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/NoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/NoteServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/WEB-INF/classes/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_note.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_note.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_notebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_notebook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_rollback.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_delete_rollback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_move.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_move.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/alert/alert_replay.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/alert/alert_replay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/activity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/activity_detail.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/images/dummy/8986f28e.stilearn-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/images/dummy/8986f28e.stilearn-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/images/icons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/scripts/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/scripts/local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/scripts/activity.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/scripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/scripts/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/scripts/note.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/scripts/notebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/scripts/notebook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/styles/icon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/styles/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/login_ghost.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/styles/login_ghost.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/umeditor.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/conf/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CloudNote/styles/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/CloudNote/styles/prettify.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/NoteBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/NoteBookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/NoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/NoteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/NoteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/NoteDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/NotebookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/NotebookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Notebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Notebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/NoteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/NoteMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/NotebookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/NotebookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/NoteBookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/NoteBookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/NoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/NoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/impl/NoteBookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/NoteBookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/NoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/NoteServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NoteServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NoteServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NoteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NoteTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/NotebookServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NotebookServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/NotebookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NotebookTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -113,38 +80,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="NoteMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="change_password.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/change_password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="34" column="89" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="89" />
+            <state relative-caret-position="442">
+              <caret line="26" column="24" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/local.js">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotebookDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/NotebookDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -152,49 +110,17 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+            <state relative-caret-position="1105">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoteBookService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/NoteBookService.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/conf/db.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotebookMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="NoteBookServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -240,9 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_note.html" />
-        <option value="$PROJECT_DIR$/src/main/java/service/NoteContentErrorException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/NotebookNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/User.java" />
         <option value="$PROJECT_DIR$/CloudNote/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -254,19 +177,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/Test2.html" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Notebook.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/styles/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/styles/login.css" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/NotebookDao.java" />
-        <option value="$PROJECT_DIR$/src/main/test/NotebookTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/NoteBookService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/test/NotebookServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/NoteBookController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_delete_notebook.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_move.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_delete_note.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/alert/alert_error.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/scripts/notebook.js" />
         <option value="$PROJECT_DIR$/src/main/java/dao/NoteDao.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/test/NoteTest.java" />
@@ -283,14 +197,26 @@
         <option value="$PROJECT_DIR$/src/main/java/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/test/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/scripts/login.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/local.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/note.js" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Note.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resource/conf/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/icon.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/login.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles/prettify.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/edit.html" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/NotebookDao.java" />
+        <option value="$PROJECT_DIR$/src/main/test/NotebookTest.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/NoteBookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/test/NotebookServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/NoteBookController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/notebook.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/scripts/login.js" />
       </list>
     </option>
   </component>
@@ -349,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,23 +355,7 @@
               <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
@@ -452,14 +363,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudNote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="alert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CloudNote" type="b2602c69:ProjectViewProjectNode" />
@@ -473,7 +376,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -530,26 +432,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testUpdate">
+  <component name="RunManager" selected="Tomcat Server.CloudNote">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="NoteServiceTest.testListAllNotes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CloudNote" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NoteServiceTest" />
-      <option name="METHOD_NAME" value="testListAllNotes" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="NoteServiceTest.testTrashNote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CloudNote" />
@@ -568,13 +453,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="NoteServiceTest.testUpdateNote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NotebookServiceTest.testUpdateNotebook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CloudNote" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NoteServiceTest" />
-      <option name="METHOD_NAME" value="testUpdateNote" />
+      <option name="MAIN_CLASS_NAME" value="NotebookServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateNotebook" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="NotebookTest.testUpdateNotebook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CloudNote" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NotebookTest" />
+      <option name="METHOD_NAME" value="testUpdateNotebook" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -791,19 +693,19 @@
     <list>
       <item itemvalue="JUnit.UserTest.testFindUserByName" />
       <item itemvalue="Tomcat Server.CloudNote" />
-      <item itemvalue="JUnit.NoteServiceTest.testListAllNotes" />
-      <item itemvalue="JUnit.NoteServiceTest.testUpdateNote" />
       <item itemvalue="JUnit.NoteServiceTest.testTrashNote" />
       <item itemvalue="JUnit.UserTest.testUpdateUser" />
       <item itemvalue="JUnit.UserServiceTest.testUpdate" />
+      <item itemvalue="JUnit.NotebookTest.testUpdateNotebook" />
+      <item itemvalue="JUnit.NotebookServiceTest.testUpdateNotebook" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NotebookServiceTest.testUpdateNotebook" />
+        <item itemvalue="JUnit.NotebookTest.testUpdateNotebook" />
         <item itemvalue="JUnit.UserServiceTest.testUpdate" />
         <item itemvalue="JUnit.UserTest.testUpdateUser" />
         <item itemvalue="JUnit.NoteServiceTest.testTrashNote" />
-        <item itemvalue="JUnit.NoteServiceTest.testUpdateNote" />
-        <item itemvalue="JUnit.NoteServiceTest.testListAllNotes" />
       </list>
     </recent_temporary>
   </component>
@@ -829,7 +731,9 @@
       <workItem from="1527781116308" duration="377000" />
       <workItem from="1527820195302" duration="9139000" />
       <workItem from="1527841945141" duration="27703000" />
-      <workItem from="1527911901889" duration="25849000" />
+      <workItem from="1527911901889" duration="27550000" />
+      <workItem from="1528181094476" duration="4184000" />
+      <workItem from="1528186194117" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="新增修改笔记功能">
       <created>1527822023665</created>
@@ -950,49 +854,63 @@
       <option name="project" value="LOCAL" />
       <updated>1527951313757</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="新增更新笔记本信息服务">
+      <created>1528186239399</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1528186239400</updated>
+    </task>
+    <task id="LOCAL-00019" summary="新增修改笔记本的相关数据的服务层方法">
+      <created>1528186283639</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1528186283639</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 49m 47s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 02m 20s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 50m 24s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 02m 30s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 52m 24s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 03m 25s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 54m 00s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 03m 52s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 56m 22s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 04m 35s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 56m 25s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 05m 10s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 56m 54s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 06m 28s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUpdateUser - 2018.06.02 at 20h 57m 48s.xml">
-      <configuration name="UserTest.testUpdateUser" configurationId="JUnit" />
+    <history-entry file="NotebookTest_testUpdateNotebook - 2018.06.05 at 15h 08m 32s.xml">
+      <configuration name="NotebookTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceTest_testUpdate - 2018.06.02 at 21h 05m 06s.xml">
-      <configuration name="UserServiceTest.testUpdate" configurationId="JUnit" />
+    <history-entry file="NotebookServiceTest_testUpdateNotebook - 2018.06.05 at 15h 22m 14s.xml">
+      <configuration name="NotebookServiceTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceTest_testUpdate - 2018.06.02 at 21h 07m 27s.xml">
-      <configuration name="UserServiceTest.testUpdate" configurationId="JUnit" />
+    <history-entry file="NotebookServiceTest_testUpdateNotebook - 2018.06.05 at 15h 22m 32s.xml">
+      <configuration name="NotebookServiceTest.testUpdateNotebook" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191943000" />
+    <option name="totallyTimeSpent" value="197918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5008143" side_tool="true" weight="0.3721591" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50162864" side_tool="true" weight="0.3622159" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980457" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="8" />
@@ -1004,16 +922,15 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39914772" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.27272728" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32954547" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32954547" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49918568" weight="0.3622159" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49918568" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49837133" weight="0.3622159" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32954547" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5539568" visible="true" weight="0.21742672" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5539568" visible="true" weight="0.22557004" />
       <window_info id="Web" order="7" sideWeight="0.44524238" side_tool="true" weight="0.21335505" />
       <window_info id="Learn" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -1022,13 +939,24 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.27272728" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Find" order="2" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1100,11 +1028,13 @@
     <MESSAGE value="页面改动" />
     <MESSAGE value="把实现特定功能的js调整了位置，加入很多功能实现，具体看注释" />
     <MESSAGE value="做了较大改动，解决了页面刷新顺序，数据绑定等问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="做了较大改动，解决了页面刷新顺序，数据绑定等问题" />
+    <MESSAGE value="新增更新笔记本信息服务" />
+    <MESSAGE value="新增修改笔记本的相关数据的服务层方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增修改笔记本的相关数据的服务层方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="48" />
+      <option name="time" value="54" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1112,6 +1042,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="89" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/alert/alert_delete_notebook.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1140,33 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/alert/alert_note.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/alert/alert_notebook.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="53" selection-start-column="43" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/alert/alert_rename.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/activity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-669" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/notebook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-907">
-          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1177,46 +1091,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/activity.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2488">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/icon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31985" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/wangEditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-82894" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico-144-precomposed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico-114-precomposed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico-72-precomposed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico-57-precomposed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ico/favico.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="46" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/NotebookNotFoundException.java">
@@ -1261,18 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2269" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2945">
-          <caret line="256" column="18" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -1284,33 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/note.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3353">
-          <caret line="615" column="50" selection-start-line="615" selection-start-column="50" selection-end-line="615" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1328,20 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="18" column="69" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/NoteBookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/NoteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -1356,45 +1180,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/NotebookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Note.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/NoteBookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1405,34 +1194,198 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18969">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3527">
+          <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/login_ghost.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/prettify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Notebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NoteMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="313">
+          <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/NotebookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="240">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/change_password.html">
+    <entry file="file://$PROJECT_DIR$/src/main/test/NotebookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="34" column="89" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="89" />
+        <state relative-caret-position="252">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/NoteBookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="74" lean-forward="true" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NoteBookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/NotebookServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="60" column="68" selection-start-line="60" selection-start-column="68" selection-end-line="60" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/activity.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/note.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/NoteBookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/local.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/notebook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2745">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/common/js-prototype.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/common/theme-setup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="24" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/NotebookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>

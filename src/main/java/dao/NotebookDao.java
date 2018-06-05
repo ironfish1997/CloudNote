@@ -16,4 +16,6 @@ public interface NotebookDao {
     int addNotebook(@Param("notebook") Notebook notebook);
 
     int deleteNotebook(String notebookId);
+
+    int updateNotebook(@Param("notebook")Notebook notebook);
 }

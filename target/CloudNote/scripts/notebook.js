@@ -156,3 +156,48 @@ function deleteNotebook() {
     )
 }
 
+/**
+ * 修改笔记本名称
+ */
+function updateNoteBook() {
+    //从修改笔记本的输入框里获取笔记本的新名字
+    var name=$('#input_notebook_rename').val();
+    //如果新名字为空，则弹窗警告并退出
+    if(name==null||name.trim()=='') {
+        alert('请输入笔记本名');
+        return;
+    }
+    //从当前选中的笔记本li上拿到绑定的notebookId，从cookie中拿到userId
+    var notebookId= $('#first_side_right li .checked').parent().data('notebookId');
+    var userId=getCookie('userId');
+    if(notebookId==null||notebookId.trim()==''){
+        alert('未选定笔记本');
+        return;
+    }
+    if(userId==null||userId.trim()==''){
+        alert('用户未登录');
+        return;
+    }
+    //发起ajax请求，更改笔记本的名称
+    var url='notebook/updateNotebook.do';
+    var data={
+        notebookId:notebookId,
+        userId:userId,
+        name:name
+    };
+    $.post(
+        url,
+        data,
+        function (result) {
+            if(result.state==SUCCESS){
+                alert('修改成功');
+                loadNoteBooks();
+                return;
+            }else{
+                alert(result.message);
+                return;
+            }
+        }
+    )
+}
+

@@ -11,4 +11,6 @@ public interface NoteBookService {
     boolean deleteNotebook(String notebookId) throws NotebookNotFoundException;
 
     boolean addNotebook(String notebookName,String userId) throws UserNotFoundException;
+
+    boolean updateNotebook(String notebookId, String userId, String name) throws NotebookNotFoundException,UserNotFoundException;
 }
