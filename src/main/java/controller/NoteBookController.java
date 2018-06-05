@@ -38,4 +38,11 @@ public class NoteBookController extends AbstractController{
         return new JsonResult(isSuccess);
     }
 
+    @RequestMapping("/updateNotebook.do")
+    @ResponseBody
+    public JsonResult update(String notebookId,String userId,String name){
+        Object isSuccess=noteBookService.updateNotebook(notebookId,userId,name);
+        return new JsonResult(isSuccess);
+    }
+
 }
