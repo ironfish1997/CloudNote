@@ -68,4 +68,33 @@ public class NoteBookServiceImpl implements NoteBookService {
         notebook.setCreateTime(new Timestamp(System.currentTimeMillis()));
         return notebookDao.addNotebook(notebook) == 1;
     }
+
+    /**
+     * 这个方法用来修改笔记本的相关数据
+     * @return
+     * @throws NotebookNotFoundException
+     * @throws UserNotFoundException
+     */
+    @Override
+    public boolean updateNotebook(String notebookId, String userId, String name) throws NotebookNotFoundException, UserNotFoundException {
+        if(userId==null||userId.trim().isEmpty()){
+            throw new UserNotFoundException("用户id为空");
+        }
+        if(notebookId==null||notebookId.trim().isEmpty()){
+            throw new NotebookNotFoundException("笔记本id为空");
+        }
+        if(name==null||name.trim().isEmpty()){
+            throw new NotebookNotFoundException("笔记本名称为空");
+        }
+        if(userDao.findUserById(userId)==null){
+            throw new UserNotFoundException("找不到用户");
+        }
+        Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
+        if(notebook==null) {
+            throw new NotebookNotFoundException("找不到笔记本");
+        }
+        notebook.setName(name);
+        int i =notebookDao.updateNotebook(notebook);
+        return i==1;
+    }
 }
