@@ -1,35 +1,4 @@
-﻿/**********公共函数**********/
-//格式化字符串，转义<和>
-function formate_name(e) {
-    e = e.replace(/</g, '&lt;');
-    e = e.replace(/>/g, '&gt;');
-    return e;
-}
-
-//去掉空格
-function check_null(s) {
-    s = s.replace(/ /g, '');
-    s = s.length;
-    return s;
-}
-
-
-/**********HTML初始化时直接调用的函数**********/
-
-//获取活动列表,activity.html初始化时调用
-function activity_list() {
-    getActivityList();
-}
-
-//获取活动页面参加活动笔记列表,activity_detail.html初始化时调用
-function get_activity_list() {
-    var param = window.location.hash;
-    global_ac_id = param.replace(/#/, '');
-    getNoteActivitys();
-}
-
-
-/**********HTML初始化后为其按钮绑定函数**********/
+﻿/**********HTML初始化后为其按钮绑定函数**********/
 //注册事件
 $(function () {
 

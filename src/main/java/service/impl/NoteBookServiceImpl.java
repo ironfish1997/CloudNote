@@ -4,9 +4,11 @@ import dao.NotebookDao;
 import dao.UserDao;
 import entity.Notebook;
 import entity.User;
+import org.omg.CORBA.UserException;
 import org.springframework.stereotype.Service;
 import service.NoteBookService;
 import service.NotebookNotFoundException;
+import service.UserNameException;
 import service.UserNotFoundException;
 
 import javax.annotation.Resource;
@@ -61,6 +63,11 @@ public class NoteBookServiceImpl implements NoteBookService {
         if (user == null) {
             throw new UserNotFoundException("用户不存在");
         }
+
+        Notebook temp = notebookDao.findNotebookByName(notebookName);
+        if (temp != null) {
+            throw new UserNameException("笔记名称不能重复");
+        }
         Notebook notebook = new Notebook();
         notebook.setId(UUID.randomUUID().toString());
         notebook.setName(notebookName);
@@ -92,6 +99,9 @@ public class NoteBookServiceImpl implements NoteBookService {
         Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
         if(notebook==null) {
             throw new NotebookNotFoundException("找不到笔记本");
+        }
+        if (userDao.findUserByName(name) != null) {
+            throw new UserNameException("笔记名称不能重复");
         }
         notebook.setName(name);
         int i =notebookDao.updateNotebook(notebook);

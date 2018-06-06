@@ -199,7 +199,8 @@ function login() {
  * 退出登录
  */
 function logout() {
-    console.log("退出");
+    delCookie('userId');
+    delCookie('userName');
     location.href = "login.html";
 }
 

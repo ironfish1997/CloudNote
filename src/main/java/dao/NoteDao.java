@@ -15,6 +15,8 @@ public interface NoteDao {
 
     List<Map<String, Object>> findAllNotes();
 
+    Note findNoteByTitle(String title);
+
     int addNote(@Param("note") Note note);
 
     int updateNote(@Param("note") Note note);

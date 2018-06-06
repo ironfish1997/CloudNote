@@ -13,6 +13,8 @@ public interface NotebookDao {
 
     Notebook findNotebookByNotebookId(String notebookId);
 
+    Notebook findNotebookByName(String notebookName);
+
     int addNotebook(@Param("notebook") Notebook notebook);
 
     int deleteNotebook(String notebookId);

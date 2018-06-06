@@ -99,6 +99,9 @@ public class NoteServiceImpl implements NoteService {
         if (title == null || title.trim().isEmpty()) {
             throw new NoteContentErrorException("title为空");
         }
+        if (noteDao.findNoteByTitle(title) != null) {
+            throw new NoteEditException("笔记标题不能重复");
+        }
         //初始化一个note对象，然后映射到数据库表里
         Note note = new Note();
         String id = UUID.randomUUID().toString();
