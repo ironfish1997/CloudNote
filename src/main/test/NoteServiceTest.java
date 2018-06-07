@@ -24,10 +24,11 @@ public class NoteServiceTest extends BaseTest {
         NoteDao dao = ctx.getBean("noteDao", NoteDao.class);
         NoteService service2 = ctx.getBean("noteService", NoteService.class);
         String noteId = "75bac888-66d4-4c9c-a283-64ad60a3f0bd";
+        String notebookId="75bac888-66d4-4c9c-a283-64ad60a3f0bd";
         System.out.println(dao.findNoteByNoteId(noteId));
         String title = "hello";
         String body = "yywo";
-        service2.updateNote(noteId, title, body);
+        service2.updateNote(noteId,notebookId, title, body);
         Map<String,Object> map= dao.findNoteByNoteId(noteId);
         System.out.println(map);
     }

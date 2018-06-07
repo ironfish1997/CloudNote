@@ -199,7 +199,8 @@ function login() {
  * 退出登录
  */
 function logout() {
-    console.log("退出");
+    delCookie('userId');
+    delCookie('userName');
     location.href = "login.html";
 }
 
@@ -236,10 +237,10 @@ function changepwd() {
                     function (result) {
                         if (result.state == SUCCESS) {
                             alert("密码修改成功,请用新密码登录");
-                            window.location.href = "/login.html";
+                            window.location.href="login.html";
                         } else {
                             alert("密码修改失败,请稍后重试");
-                            window.location.href = "/login.html";
+                            window.location.href="login.html";
                         }
                     }
                 )

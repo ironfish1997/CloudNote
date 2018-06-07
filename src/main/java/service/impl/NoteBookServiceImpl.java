@@ -66,7 +66,7 @@ public class NoteBookServiceImpl implements NoteBookService {
 
         Notebook temp = notebookDao.findNotebookByName(notebookName);
         if (temp != null) {
-            throw new UserNameException("笔记名称不能重复");
+            throw new UserNameException("笔记本名称不能重复");
         }
         Notebook notebook = new Notebook();
         notebook.setId(UUID.randomUUID().toString());
@@ -100,8 +100,8 @@ public class NoteBookServiceImpl implements NoteBookService {
         if(notebook==null) {
             throw new NotebookNotFoundException("找不到笔记本");
         }
-        if (userDao.findUserByName(name) != null) {
-            throw new UserNameException("笔记名称不能重复");
+        if (notebookDao.findNotebookByName(name) != null) {
+            throw new UserNameException("笔记本名称不能重复");
         }
         notebook.setName(name);
         int i =notebookDao.updateNotebook(notebook);

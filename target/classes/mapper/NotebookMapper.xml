@@ -23,6 +23,18 @@
         where cn_notebook_id =#{notebookId}
     </select>
 
+    <select id="findNotebookByName" parameterType="string" resultType="entity.Notebook">
+        select
+        cn_notebook_id as id,
+        cn_user_id as userId,
+        cn_notebook_type_id as typeId,
+        cn_notebook_name as name,
+        cn_notebook_desc as descr,
+        cn_notebook_createtime as createTime
+        from cn_notebook
+        where cn_notebook_name =#{notebookName}
+    </select>
+
     <update id="updateNotebook" parameterType="entity.Notebook">
         update cn_notebook
         <trim prefix="set" suffixOverrides=",">

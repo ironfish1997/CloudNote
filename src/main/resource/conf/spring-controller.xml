@@ -13,4 +13,30 @@
     <context:component-scan base-package="controller"/>
     <!-- 这个配置可以让@Controller注解生效 -->
     <mvc:annotation-driven/>
+
+    <!-- 配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 配置拦截器 -->
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--&lt;!&ndash; 拦截所有的请求,path是/**&ndash;&gt;-->
+            <!--<mvc:mapping path="/**"/>-->
+            <!--<mvc:exclude-mapping path="user/login.do"/>-->
+            <!--<mvc:exclude-mapping path="user/register.do"/>-->
+            <!--&lt;!&ndash; 拦截器的具体类 &ndash;&gt;-->
+            <!--<bean class="util.LoginHandlerInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.Exception">login</prop>
+            </props>
+        </property>
+    </bean>
 </beans>

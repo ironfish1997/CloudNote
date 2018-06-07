@@ -39,14 +39,14 @@ public class NoteController extends AbstractController {
 
     @RequestMapping("/updateNote.do")
     @ResponseBody
-    public JsonResult updateNote(String noteId,  String title,String body) {
-        return new JsonResult(noteService.updateNote(noteId, title, body));
+    public JsonResult updateNote(String noteId,String notebookId,  String title,String body) {
+        return new JsonResult(noteService.updateNote(noteId,notebookId, title, body));
     }
 
     @RequestMapping("/moveNote.do")
     @ResponseBody
-    public JsonResult moveNote(String noteId, String notebookId){
-        return new JsonResult(noteService.updateNote(noteId,notebookId));
+    public JsonResult moveNote(String noteId, String notebookId,String title){
+        return new JsonResult(noteService.updateNote(noteId,notebookId,title));
     }
 
     @RequestMapping("/getNoteContent.do")

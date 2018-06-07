@@ -39,8 +39,9 @@ public class NotebookServiceTest extends BaseTest {
     public void testUpdateNote(){
         String noteId="f4594f33-06d4-47dc-87cf-c3bd20e5a23f";
         String notebookId="5c4f839b-6a2f-4b5d-9961-6be3258f3fb5";
+        String title="day01";
         NoteService service=ctx.getBean("noteService", NoteService.class);
-        service.updateNote(noteId,notebookId);
+        service.updateNote(noteId,notebookId,title);
     }
 
     /**

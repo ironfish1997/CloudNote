@@ -104,6 +104,7 @@ function addNoteBook() {
     }
     if (userId == null || userId == '') {
         alert("用户id不能为空");
+        window.location.href = 'login.html';
         return;
     }
     //发送ajax请求，新建一个笔记本
@@ -176,6 +177,7 @@ function updateNoteBook() {
     }
     if(userId==null||userId.trim()==''){
         alert('用户未登录');
+        window.location.href = 'login.html';
         return;
     }
     //发起ajax请求，更改笔记本的名称

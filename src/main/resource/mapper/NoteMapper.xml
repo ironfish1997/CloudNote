@@ -127,7 +127,7 @@
             cn_note_id =#{noteId}
     </select>
 
-    <select id="findNoteByTitle" parameterType="string" resultType="entity.Note">
+    <select id="findNoteByTitleAndNotebookId" resultType="entity.Note">
         select
             cn_note_id as id,
             cn_notebook_id as notebookId,
@@ -141,7 +141,7 @@
         from
             cn_note
         where
-            cn_note_title =#{title}
+            cn_note_title =#{0} and cn_notebook_id=#{1} and cn_note_status_id not in ('delete')
     </select>
 
     <delete id="deleteNote" parameterType="string">

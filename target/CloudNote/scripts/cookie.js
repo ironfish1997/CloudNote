@@ -38,6 +38,7 @@ function delCookie(name) {
 	var exp = new Date();
 	exp.setTime(exp.getTime() - 1);
 	var cval = getCookie(name);
+    //设置cookie的过期时间为已过期
 	if (cval != null) {
 		document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 	}
