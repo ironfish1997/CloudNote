@@ -217,7 +217,7 @@ function chooseNote() {
     var url = 'note/getNoteContent.do';
     var data = {noteId: noteId};
     //如果当前是在垃圾箱页面，就把编辑按钮隐藏
-    if(li.hasClass('disable')){
+    if (li.hasClass('disable')) {
         $('#edit_note').hide();
     }
     $.getJSON(url, data, function (result) {
@@ -303,11 +303,17 @@ function updateNote() {
     var body = editor.txt.html();
     //拿到当前选定的笔记li绑定的笔记id
     var noteId = $('#note-list .checked').parent().data('noteId');
-    if(noteId==null){
+    if (noteId == null) {
         noteId = $('#trash-bin .checked').parent().data('noteId');
     }
-    var data = {title: title, body: body, noteId: noteId};
-    var url = '/note/updateNote.do';
+    //得到选定的笔记本项的notebookId
+    var notebookId = $('#first_side_right li .checked').parent().data('notebookId');
+    if (notebookId == null) {
+        alert("请选定笔记本");
+        return;
+    }
+    var data = {title: title, body: body, noteId: noteId, notebookId: notebookId};
+    var url = 'note/updateNote.do';
     $.getJSON(url, data, function (result) {
         if (result.state == SUCCESS) {
             alert("笔记修改成功");
@@ -386,7 +392,7 @@ function setNoteBookToSelect() {
         alert("userId不能为空");
         return;
     }
-    var url = '/notebook/list.do';
+    var url = 'notebook/list.do';
     var data = {
         userId: userId
     }
@@ -432,15 +438,17 @@ function moveNote() {
     var notebookId = option.data('notebookId');
     var noteLi = $('#note-show-ul .online .checked').parent();
     var noteId = noteLi.data('noteId');
+    var title = $('#note_title_content').text();
     //如果拿到的notebookId为空则提示
     if (noteId == null || notebookId == '') {
         alert('笔记id为空');
         return;
     }
-    var url = '/note/moveNote.do';
+    var url = 'note/moveNote.do';
     var data = {
         notebookId: notebookId,
-        noteId: noteId
+        noteId: noteId,
+        title: title
     };
     $.post(
         url,
@@ -493,7 +501,7 @@ function trashNote() {
  */
 function deleteNote() {
     //从当前选中的笔记li上拿到绑定的noteId
-    var noteId=$('#trash-bin .checked').parent().data('noteId');
+    var noteId = $('#trash-bin .checked').parent().data('noteId');
     //检查noteId是否拿到了，如果没拿到直接弹窗
     if (noteId == null || noteId == '') {
         alert("未选定笔记");
@@ -541,7 +549,7 @@ function setNoteBookToTrashSelect() {
         alert("userId不能为空");
         return;
     }
-    var url = '/notebook/list.do';
+    var url = 'notebook/list.do';
     var data = {
         userId: userId
     }
@@ -581,21 +589,23 @@ function showTrashMoveSelector(notebooks) {
 /**
  * 恢复在回收站里的笔记
  */
-function moveTrash(){
+function moveTrash() {
     //拿到当前选中项
     var option = $('#replaySelect option:selected');
     var notebookId = option.data('notebookId');
     var noteLi = $('#trash_show_li .checked').parent();
     var noteId = noteLi.data('noteId');
+    var title = $('#note_title_content').text();
     //如果拿到的notebookId为空则提示
     if (noteId == null || notebookId == '') {
         alert('笔记id为空');
         return;
     }
-    var url = '/note/moveNote.do';
+    var url = 'note/moveNote.do';
     var data = {
         notebookId: notebookId,
-        noteId: noteId
+        noteId: noteId,
+        title: title
     };
     $.post(
         url,
@@ -603,21 +613,20 @@ function moveTrash(){
         function (result) {
             if (result.state == SUCCESS) {
                 $.post(
-                    '/note/trashNote.do',
+                    'note/trashNote.do',
                     {
-                        noteId:noteId,
-                        statusId:'normal'
+                        noteId: noteId,
+                        statusId: 'normal'
                     },
-                    function(result){
-                        if(result.state==SUCCESS){
+                    function (result) {
+                        if (result.state == SUCCESS) {
                             alert('恢复笔记成功');
                             //触发一次回收站按钮点击事件，重新加载回收站笔记
                             $('#rollback_button').click();
-                        }else{
+                        } else {
                             alert('恢复笔记失败,请重试');
                         }
                     }
-
                 );
 
             } else {
@@ -625,17 +634,4 @@ function moveTrash(){
             }
         }
     )
-}
-
-//---------------------------------------------------------------------------------
-
-
-/***
- * 分享笔记
- */
-function createShareNote() {
-    $("footer div strong").text("分享成功").parent().fadeIn(100);
-    setTimeout(function () {
-        $("footer div").fadeOut(500);
-    }, 1500);
 }
