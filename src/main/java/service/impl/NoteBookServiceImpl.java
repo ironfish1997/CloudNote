@@ -4,7 +4,6 @@ import dao.NotebookDao;
 import dao.UserDao;
 import entity.Notebook;
 import entity.User;
-import org.omg.CORBA.UserException;
 import org.springframework.stereotype.Service;
 import service.NoteBookService;
 import service.NotebookNotFoundException;
@@ -19,9 +18,12 @@ import java.util.UUID;
 
 @Service("noteBookService")
 public class NoteBookServiceImpl implements NoteBookService {
+    public NoteBookServiceImpl() {
+    }
 
     @Resource
     private NotebookDao notebookDao;
+
     @Resource
     private UserDao userDao;
 
@@ -39,15 +41,15 @@ public class NoteBookServiceImpl implements NoteBookService {
 
     @Override
     public boolean deleteNotebook(String notebookId) throws NotebookNotFoundException {
-        if(notebookId==null|| notebookId.trim().isEmpty()){
+        if (notebookId == null || notebookId.trim().isEmpty()) {
             throw new NotebookNotFoundException("笔记本id为空");
         }
-        Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
-        if(notebook==null){
+        Notebook notebook = notebookDao.findNotebookByNotebookId(notebookId);
+        if (notebook == null) {
             throw new NotebookNotFoundException("笔记本不存在");
         }
-        int i=notebookDao.deleteNotebook(notebookId);
-        return i==1;
+        int i = notebookDao.deleteNotebook(notebookId);
+        return i == 1;
     }
 
     @Override
@@ -78,33 +80,33 @@ public class NoteBookServiceImpl implements NoteBookService {
 
     /**
      * 这个方法用来修改笔记本的相关数据
-     * @return
+     *
      * @throws NotebookNotFoundException
      * @throws UserNotFoundException
      */
     @Override
     public boolean updateNotebook(String notebookId, String userId, String name) throws NotebookNotFoundException, UserNotFoundException {
-        if(userId==null||userId.trim().isEmpty()){
+        if (userId == null || userId.trim().isEmpty()) {
             throw new UserNotFoundException("用户id为空");
         }
-        if(notebookId==null||notebookId.trim().isEmpty()){
+        if (notebookId == null || notebookId.trim().isEmpty()) {
             throw new NotebookNotFoundException("笔记本id为空");
         }
-        if(name==null||name.trim().isEmpty()){
+        if (name == null || name.trim().isEmpty()) {
             throw new NotebookNotFoundException("笔记本名称为空");
         }
-        if(userDao.findUserById(userId)==null){
+        if (userDao.findUserById(userId) == null) {
             throw new UserNotFoundException("找不到用户");
         }
-        Notebook notebook=notebookDao.findNotebookByNotebookId(notebookId);
-        if(notebook==null) {
+        Notebook notebook = notebookDao.findNotebookByNotebookId(notebookId);
+        if (notebook == null) {
             throw new NotebookNotFoundException("找不到笔记本");
         }
         if (notebookDao.findNotebookByName(name) != null) {
             throw new UserNameException("笔记本名称不能重复");
         }
         notebook.setName(name);
-        int i =notebookDao.updateNotebook(notebook);
-        return i==1;
+        int i = notebookDao.updateNotebook(notebook);
+        return i == 1;
     }
 }

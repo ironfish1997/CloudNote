@@ -3,24 +3,44 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Archetype Created Web Application</display-name>
+    <display-name>CloudNote</display-name>
 
-    <!-- 为解决中文乱码问题，引入一个SpringMVC提供的过滤器 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:conf/spring-*.xml</param-value>
+    </context-param>
+
+    <!-- characterEncodingFilter字符编码过滤器 -->
     <filter>
-        <filter-name>encodingFilter</filter-name>
-        <filter-class>
-            org.springframework.web.filter.CharacterEncodingFilter
-        </filter-class>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
+            <!--要使用的字符集，一般我们使用UTF-8(保险起见UTF-8最好)-->
             <param-name>encoding</param-name>
-            <param-value>utf-8</param-value>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <!--是否强制设置request的编码为encoding，默认false，不建议更改-->
+            <param-name>forceRequestEncoding</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <!--是否强制设置response的编码为encoding，建议设置为true，下面有关于这个参数的解释-->
+            <param-name>forceResponseEncoding</param-name>
+            <param-value>true</param-value>
         </init-param>
     </filter>
 
     <filter-mapping>
-        <filter-name>encodingFilter</filter-name>
+        <filter-name>characterEncodingFilter</filter-name>
+        <!--这里不能留空或者直接写 ' / ' ，否者不起作用-->
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <!-- 配置ContextLoaderListener用以初始化Spring IoC容器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <!-- 配置SpringMVC前端控制器 -->
     <servlet>
@@ -30,10 +50,11 @@
         </servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:conf/spring-*.xml</param-value>
+            <param-value>classpath:conf/spring-service.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>*.do</url-pattern>

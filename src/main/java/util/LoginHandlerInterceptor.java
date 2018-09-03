@@ -7,6 +7,9 @@ import javax.servlet.http.Cookie;
 
 
 public class LoginHandlerInterceptor extends HandlerInterceptorAdapter {
+    public LoginHandlerInterceptor() {
+    }
+
     @Override
     public boolean preHandle(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, Object handler) throws Exception {
         Cookie[] cookies = request.getCookies();

@@ -8,11 +8,11 @@ import java.util.Objects;
 @Component("user")
 public class User implements Serializable {
     private static final long serialVersionUID = -8228569662628197300L;
-    private String id=null;
-    private String name=null;
-    private String password=null;
-    private String token=null;
-    private String nick=null;
+    private String id = null;
+    private String name = null;
+    private String password = null;
+    private String token = null;
+    private String nick = null;
 
     public User(String id, String name, String password, String token, String nick) {
         this.id = id;
@@ -37,7 +37,6 @@ public class User implements Serializable {
     }
 
     public User() {
-        super();
 
     }
 

@@ -7,13 +7,17 @@ import service.NoteService;
 import util.JsonResult;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Controller("noteController")
 @RequestMapping("/note")
 public class NoteController extends AbstractController {
+
+    public NoteController() {
+
+    }
+
     @Resource
     private NoteService noteService;
 
@@ -26,7 +30,7 @@ public class NoteController extends AbstractController {
 
     @RequestMapping("/listAll.do")
     @ResponseBody
-    public Object listAll(){
+    public Object listAll() {
         List<Map<String, Object>> list = noteService.listAllNotes();
         return new JsonResult(list);
     }
@@ -39,31 +43,31 @@ public class NoteController extends AbstractController {
 
     @RequestMapping("/updateNote.do")
     @ResponseBody
-    public JsonResult updateNote(String noteId,String notebookId,  String title,String body) {
-        return new JsonResult(noteService.updateNote(noteId,notebookId, title, body));
+    public JsonResult updateNote(String noteId, String notebookId, String title, String body) {
+        return new JsonResult(noteService.updateNote(noteId, notebookId, title, body));
     }
 
     @RequestMapping("/moveNote.do")
     @ResponseBody
-    public JsonResult moveNote(String noteId, String notebookId,String title){
-        return new JsonResult(noteService.updateNote(noteId,notebookId,title));
+    public JsonResult moveNote(String noteId, String notebookId, String title) {
+        return new JsonResult(noteService.updateNote(noteId, notebookId, title));
     }
 
     @RequestMapping("/getNoteContent.do")
     @ResponseBody
-    public JsonResult getNoteContentByNoteId(String noteId){
+    public JsonResult getNoteContentByNoteId(String noteId) {
         return new JsonResult(noteService.getNoteContent(noteId));
     }
 
     @RequestMapping("/trashNote.do")
     @ResponseBody
-    public JsonResult trashNote(String noteId,String statusId){
-        return new JsonResult(noteService.trashNote(noteId,statusId));
+    public JsonResult trashNote(String noteId, String statusId) {
+        return new JsonResult(noteService.trashNote(noteId, statusId));
     }
 
     @RequestMapping("/deleteNote.do")
     @ResponseBody
-    public JsonResult deleteNote(String noteId){
+    public JsonResult deleteNote(String noteId) {
         return new JsonResult(noteService.deleteNote(noteId));
     }
 }
